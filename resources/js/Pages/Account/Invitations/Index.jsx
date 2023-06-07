@@ -68,9 +68,9 @@ export default function InvitationIndex() {
                                                 <th scope="col" style={{ width: '5%' }}>No.</th>
                                                 <th scope="col" style={{ width: '15%' }}>Title</th>
                                                 <th scope="col" style={{ width: '15%' }}>Slug</th>
-                                                {auth.user.roles[0].name === 'admin' &&
+                                                {/* {auth.user.roles[0].name === 'admin' &&
                                                     <th scope="col" style={{ width: '15%' }}>User</th>
-                                                }
+                                                } */}
                                                 {auth.user.roles[0].name === 'admin' &&
                                                     <th scope="col" style={{ width: '15%' }}>Client</th>
                                                 }
@@ -86,9 +86,9 @@ export default function InvitationIndex() {
                                                     <td className="text-center">{++index + (invitations.current_page - 1) * invitations.per_page}</td>
                                                     <td>{invitation.title}</td>
                                                     <td>/{invitation.slug}</td>
-                                                    {auth.user.roles[0].name === 'admin' &&
+                                                    {/* {auth.user.roles[0].name === 'admin' &&
                                                         <td>{invitation.user.name}</td>
-                                                    }
+                                                    } */}
                                                     {auth.user.roles[0].name === 'admin' &&
                                                         <td>{invitation.client?.username}</td>
                                                     }
