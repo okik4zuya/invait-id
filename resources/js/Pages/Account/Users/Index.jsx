@@ -60,7 +60,7 @@ export default function UserIndex() {
                                         <tr>
                                             <th scope="col" style={{ width: '5%' }}>No.</th>
                                             <th scope="col" style={{ width: '15%' }}>Name</th>
-                                            <th scope="col" style={{ width: '15%' }}>Email Address</th>
+                                            <th scope="col" style={{ width: '15%' }}>Username</th>
                                             <th scope="col" style={{ width: '30%' }}>Role</th>
                                             <th scope="col" style={{ width: '15%' }}>Actions</th>
                                         </tr>
@@ -70,7 +70,7 @@ export default function UserIndex() {
                                                 <tr key={index}>
                                                     <td className="text-center">{++index + (users.current_page-1) * users.per_page}</td>
                                                     <td>{user.name}</td>
-                                                    <td>{user.email}</td>
+                                                    <td>{user.username}</td>
                                                     <td>
                                                         {user.roles.map((role, index) => (
                                                             <span className="btn btn-success btn-sm shadow-sm border-0 ms-2 mb-2" key={index}>

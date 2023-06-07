@@ -20,6 +20,7 @@ export default function UserCreate() {
 
     //state
     const [name, setName] = useState("");
+    const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
@@ -46,6 +47,7 @@ export default function UserCreate() {
 
             //data
             name: name,
+            username: username,
             email: email,
             password: password,
             password_confirmation: passwordConfirmation,
@@ -89,6 +91,17 @@ export default function UserCreate() {
                                             {errors.name && (
                                                 <div className="alert alert-danger">
                                                     {errors.name}
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="mb-3">
+                                                <label className="form-label fw-bold">Username</label>
+                                                <input type="text" className="form-control" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Enter Username" />
+                                            </div>
+                                            {errors.username && (
+                                                <div className="alert alert-danger">
+                                                    {errors.username}
                                                 </div>
                                             )}
                                         </div>

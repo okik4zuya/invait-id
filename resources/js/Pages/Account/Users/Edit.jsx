@@ -20,6 +20,7 @@ export default function UserEdit() {
 
     //state
     const [name, setName] = useState(user.name);
+    const [username, setUsername] = useState(user.username);
     const [email, setEmail] = useState(user.email);
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
@@ -47,13 +48,14 @@ export default function UserEdit() {
     //method "updateUser"
     const updateUser = async (e) => {
         e.preventDefault();
-        
+
         //sending data
         Inertia.put(`/account/users/${user.id}`, {
 
             //data
             name: name,
             email: email,
+            username: username,
             password: password,
             password_confirmation: passwordConfirmation,
             roles: rolesData
@@ -101,6 +103,17 @@ export default function UserEdit() {
                                         </div>
                                         <div className="col-md-6">
                                             <div className="mb-3">
+                                                <label className="form-label fw-bold">Username</label>
+                                                <input type="text" className="form-control" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Enter Username" />
+                                            </div>
+                                            {errors.username && (
+                                                <div className="alert alert-danger">
+                                                    {errors.username}
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="mb-3">
                                                 <label className="form-label fw-bold">Email Address</label>
                                                 <input type="text" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email Address" />
                                             </div>
@@ -134,16 +147,16 @@ export default function UserEdit() {
 
                                     <div className="mb-3">
                                         <label className="fw-bold">Roles</label>
-                                        <br/>
+                                        <br />
                                         {roles.map((role, index) => (
                                             <div className="form-check form-check-inline" key={index}>
-                                                <input className="form-check-input" type="checkbox" 
+                                                <input className="form-check-input" type="checkbox"
                                                     value={role.name}
                                                     defaultChecked={rolesData.some((name) => name === role.name ?? true)}
                                                     onChange={handleCheckboxChange}
-                                                    id={`check-${role.id}`} 
+                                                    id={`check-${role.id}`}
                                                 />
-                                                <label className="form-check-label" htmlFor={`check-${role.id}`}>{ role.name }</label>
+                                                <label className="form-check-label" htmlFor={`check-${role.id}`}>{role.name}</label>
                                             </div>
                                         ))}
 
