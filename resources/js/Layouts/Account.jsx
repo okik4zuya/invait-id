@@ -13,6 +13,8 @@ import { Inertia } from '@inertiajs/inertia';
 //import Sidebar
 import Sidebar from '../Components/Sidebar';
 
+import './account.css'
+
 export default function LayoutAccount({ children }) {
 
     //get props auth
@@ -54,7 +56,7 @@ export default function LayoutAccount({ children }) {
                 <div className="bg-sidebar" id="sidebar-wrapper">
                     <div className="sidebar-heading bg-light text-center">
                         <div className="logo-wrapper--flex text-center">
-                            <img src="/assets/images/logo.png"/>
+                            <img src="/assets/images/logo.png" />
                             <div className="invait">Invait</div>
                         </div>
                     </div>
@@ -70,6 +72,9 @@ export default function LayoutAccount({ children }) {
                                         <NavDropdown.Item onClick={logoutHandler}><i className="fa fa-sign-out-alt me-2"></i> Logout</NavDropdown.Item>
                                     </NavDropdown>
                                 </ul>
+                            </div>
+                            <div className="logo--mobile logo-wrapper--flex text-center me-3">
+                                <img src="/assets/images/logo.png" />
                             </div>
                         </div>
                     </nav>

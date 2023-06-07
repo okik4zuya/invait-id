@@ -70,9 +70,9 @@ export default function Login() {
                                 </form>
                             </div>
                         </div>
-                        <div className="register text-center mt-3" style={{ color: "white" }}>
+                        {/* <div className="register text-center mt-3" style={{ color: "white" }}>
                             Need an account? <Link href="/register">Register!</Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
