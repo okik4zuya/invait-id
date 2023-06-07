@@ -70,6 +70,7 @@ class UserController extends Controller
         $user = User::create([
             'name'     => $request->name,
             'username' => $request->username,
+            'contact' => $request->contact,
             'email'    => $request->email,
             'password' => bcrypt($request->password)
         ]);
@@ -130,6 +131,7 @@ class UserController extends Controller
             $user->update([
                 'name'     => $request->name,
                 'username' => $request->username,
+                'contact' => $request->contact,
                 'email'    => $request->email
             ]);
         } else {
@@ -138,6 +140,7 @@ class UserController extends Controller
                 'name'     => $request->name,
                 'username' => $request->username,
                 'email'    => $request->email,
+                'contact' => $request->contact,
                 'password' => bcrypt($request->password)
             ]);
         }

@@ -7,7 +7,7 @@ export default function ClientRSVPIndex() {
     //destructure invitation from usePage
     const { rsvp } = usePage().props;
 
-    console.log(usePage())
+    // console.log(usePage())
     return (
         <LayoutAccount>
             <div className="row mt-2 mb-4">

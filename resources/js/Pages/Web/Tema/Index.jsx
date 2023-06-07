@@ -11,7 +11,7 @@ export default function TemaIndex() {
     const { templates, template_categories, templates_count } = usePage().props;
     const { url } = usePage()
 
-    console.log(usePage().props)
+    // console.log(usePage().props)
 
     //define states
     const [fetchedTemplates, setFetchedTemplates] = useState(templates.data);
@@ -26,7 +26,7 @@ export default function TemaIndex() {
             templates.links[templates.links.length - 1]
         ]
     }
-    console.log(paginationToRender())
+    // console.log(paginationToRender())
 
 
 
@@ -68,6 +68,7 @@ export default function TemaIndex() {
                     </div>
                     {template_categories.sort((a,b)=>(b.template_count-a.template_count)).map((item, key) => (
                         <div
+                        key={key}
                             className={`category ${urlParams?.get('category') === item.name && 'category--glass'}`}
                         >
                             <Link
@@ -92,6 +93,7 @@ export default function TemaIndex() {
                         </div>
                         {template_categories.map((item, key) => (
                             <div
+                            key={key}
                                 className={`category--mobile ${urlParams?.get('category') === item.name && 'active category--glass'}`}
                             >
                                 <Link
@@ -106,7 +108,7 @@ export default function TemaIndex() {
                     </div>
                     <div className='tema-list'>
                         {templates.data.map((item, key) => (
-                            <div className='tema__item'>
+                            <div key={key}className='tema__item'>
                                 <div className='glass-card tema__title'>{item.name}</div>
                                 <div className='tema__thumbnail' onClick={()=>Inertia.visit(`/i/${item.preview_slug}`)}>
                                     <img src={item.thumbnail} />

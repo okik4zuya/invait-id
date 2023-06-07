@@ -30,16 +30,16 @@ export default function RoleIndex() {
                 <title>Roles - Invait</title>
             </Head>
             <LayoutAccount>
-                <div class="row mt-5">
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-md-3 col-12 mb-2">
-                                <Link href="/account/roles/create" class="btn btn-md btn-success border-0 shadow w-100" type="button">
-                                    <i class="fa fa-plus-circle me-2"></i>
+                <div className="row mt-5">
+                    <div className="col-md-8">
+                        <div className="row">
+                            <div className="col-md-3 col-12 mb-2">
+                                <Link href="/account/roles/create" className="btn btn-md btn-success border-0 shadow w-100" type="button">
+                                    <i className="fa fa-plus-circle me-2"></i>
                                     Add
                                 </Link>
                             </div>
-                            <div class="col-md-9 col-12 mb-2">
+                            <div className="col-md-9 col-12 mb-2">
 
                                 <Search URL={'/account/roles'} />
 
@@ -78,7 +78,7 @@ export default function RoleIndex() {
                                                     </td>
                                                     <td className="text-center">
                                                         {hasAnyPermission(['roles.edit']) &&
-                                                            <Link href={`/account/roles/${role.id}/edit`} className="btn btn-primary btn-sm me-2"><i className="fa fa-pencil-alt"></i></Link>
+                                                            <Link href={`/account/roles/${role.id}/edit`} className="btn btn-success btn-sm me-2"><i className="fa fa-pencil-alt"></i></Link>
                                                         }
                                                         {hasAnyPermission(['roles.delete']) &&
                                                             <Delete URL={'/account/roles'} id={role.id} />

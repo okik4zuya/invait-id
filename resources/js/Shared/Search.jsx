@@ -1,5 +1,5 @@
 //import react  
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 //import inertia adapter
 import { Inertia } from '@inertiajs/inertia';
@@ -14,17 +14,17 @@ export default function Search({ URL }) {
         e.preventDefault();
 
         //fetch to search
-        Inertia.get(`${URL}?q=${search}`);
+        Inertia.get(`${URL}?q=${search}`, {}, { preserveState: true });
     }
 
     return (
         <>
             <form onSubmit={searchHandlder}>
-                <div class="input-group">
-                    <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} class="form-control border-0 shadow-sm" placeholder="type keywords and enter..."/>
-                        <span class="input-group-text-search border-0 shadow-sm">
-                            <i class="fa fa-search"></i>
-                        </span>
+                <div className="input-group">
+                    <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} className="form-control border-0 shadow-sm" placeholder="type keywords and enter..." />
+                    <span className="input-group-text-search border-0 shadow-sm">
+                        <i className="fa fa-search"></i>
+                    </span>
                 </div>
             </form>
         </>

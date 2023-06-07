@@ -83,7 +83,7 @@
 
 .tema__thumbnail {
     width: 100%;
-    height: 240px;
+    aspect-ratio: .6;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.2);
@@ -95,6 +95,7 @@
 .tema__thumbnail img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .tema__preview-button {

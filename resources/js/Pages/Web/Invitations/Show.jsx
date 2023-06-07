@@ -20,7 +20,7 @@ export default function InvitationShow() {
     //destructure inertia usePage()
     const { invitation } = usePage().props;
     const { template } = invitation;
-    console.log(invitation)
+    // console.log(invitation)
 
     //define url params
     const q = window.location.search

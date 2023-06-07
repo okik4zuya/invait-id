@@ -22,6 +22,7 @@ export default function UserEdit() {
     const [name, setName] = useState(user.name);
     const [username, setUsername] = useState(user.username);
     const [email, setEmail] = useState(user.email);
+    const [contact, setContact] = useState(user.contact);
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
     const [rolesData, setRolesData] = useState(user.roles.map(obj => obj.name));
@@ -55,6 +56,7 @@ export default function UserEdit() {
             //data
             name: name,
             email: email,
+            contact: contact,
             username: username,
             password: password,
             password_confirmation: passwordConfirmation,
@@ -120,6 +122,17 @@ export default function UserEdit() {
                                             {errors.email && (
                                                 <div className="alert alert-danger">
                                                     {errors.email}
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="mb-3">
+                                                <label className="form-label fw-bold">Contact</label>
+                                                <input type="text" className="form-control" value={contact} onChange={(e) => setContact(e.target.value)} placeholder="Enter Contact" />
+                                            </div>
+                                            {errors.contact && (
+                                                <div className="alert alert-danger">
+                                                    {errors.contact}
                                                 </div>
                                             )}
                                         </div>

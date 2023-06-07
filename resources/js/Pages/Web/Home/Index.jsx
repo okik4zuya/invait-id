@@ -74,7 +74,7 @@ export default function HomeIndex() {
             width: '100%',
             height: '100%',
             autoplay: true,
-            interval: 2500,
+            interval: 3500,
             type: 'loop',
             arrows: false,
             pagination: false,

@@ -8,6 +8,7 @@ use App\Models\CustomTemplate;
 use App\Models\InvitationContent;
 use App\Models\Template;
 use App\Models\User;
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -25,18 +26,25 @@ class InvitationController extends Controller
      */
     public function index()
     {
+
         //get invitations
-        if(request()->user()->roles[0]->name === 'admin'){
-        $invitations = Invitation::with('user')->when(request()->q, function ($invitations) {
-            $invitations = $invitations->where('title', 'like', '%' . request()->q . '%')
-                ->orWhere('slug', 'like', '%' . request()->q . '%');
-        })->latest()->paginate(10);
-        } else if(request()->user()->roles[0]->name === 'reseller'){
-        $invitations = Invitation::with('user')->where('reseller_id', request()->user()->id)->when(request()->q, function ($invitations) {
-            $invitations = $invitations->where('title', 'like', '%' . request()->q . '%')
-                ->orWhere('slug', 'like', '%' . request()->q . '%');
-        })->latest()->paginate(10);
-            
+        if (request()->user()->roles[0]->name === 'admin') {
+            $invitations = Invitation::with('user')
+            ->with('reseller')
+            ->with('client')
+            ->when(request()->q, function ($invitations) {
+                $invitations = $invitations->where('title', 'like', '%' . request()->q . '%')
+                    ->orWhere('slug', 'like', '%' . request()->q . '%');
+            })
+            ->when(request()->reseller, function($invitations){
+                $invitations = $invitations->where('reseller_id', request()->reseller);
+            })
+            ->latest()->paginate(10);
+        } else if (request()->user()->roles[0]->name === 'reseller') {
+            $invitations = Invitation::with('user')->where('reseller_id', request()->user()->id)->when(request()->q, function ($invitations) {
+                $invitations = $invitations->where('title', 'like', '%' . request()->q . '%')
+                    ->orWhere('slug', 'like', '%' . request()->q . '%');
+            })->latest()->paginate(10);
         }
 
         // dd(request()->user()->roles[0]->name);

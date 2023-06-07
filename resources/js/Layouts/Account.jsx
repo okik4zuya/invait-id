@@ -63,7 +63,7 @@ export default function LayoutAccount({ children }) {
                 <div id="page-content-wrapper">
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <div className="container-fluid">
-                            <button className="btn btn-success-dark" onClick={sidebarToggleHandler}><i className="fa fa-list-ul"></i></button>
+                            <button className="btn btn-success" onClick={sidebarToggleHandler}><i className="fa fa-list-ul"></i></button>
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
                                     <NavDropdown title={auth.user.name} className="fw-bold" id="basic-nav-dropdown">

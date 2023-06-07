@@ -35,10 +35,10 @@ export default function WebLayout(props) {
                     <li className='navbar__item'>
                         <Link href='/tema'> Tema </Link>
                     </li>
-                    <div className='dot-spacer'></div>
+                    {/* <div className='dot-spacer'></div>
                     <li className='navbar__item'>
                         <Link href='/tema'>Cara Order</Link>
-                    </li>
+                    </li> */}
                 </ul>
                 <ul className={`home__navbar home__navbar--mobile ${isNavbarSticky && 'home__navbar--fixed'}`} >
                     <img className='logo-invait' src="/assets/images/logo.png" onClick={()=>Inertia.visit('/')}/>

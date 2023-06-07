@@ -51,6 +51,15 @@ class Invitation extends Model
         return $this->belongsTo(User::class, 'client_id');
     }
     /**
+     * reseller
+     * 
+     * @return void
+     */
+    public function reseller()
+    {
+        return $this->belongsTo(User::class, 'reseller_id');
+    }
+    /**
      * template
      * 
      * @return void

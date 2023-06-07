@@ -26,6 +26,10 @@ export default function InvitationIndex() {
 
     //destruct props "invitations"
     const { invitations, auth } = usePage().props;
+    // console.log(invitations)
+    //define url params
+    const q = window.location.search
+    const urlParams = new URLSearchParams(q)
 
     return (
         <>
@@ -54,7 +58,7 @@ export default function InvitationIndex() {
                     <div className="col-12">
                         <div className="card border-0">
                             <div className="card-header">
-                                <span className="font-weight-bold"><i className="fa fa-shield-alt"></i> Invitations</span>
+                                <span className="font-weight-bold">Invitations</span>
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
@@ -66,6 +70,12 @@ export default function InvitationIndex() {
                                                 <th scope="col" style={{ width: '15%' }}>Slug</th>
                                                 {auth.user.roles[0].name === 'admin' &&
                                                     <th scope="col" style={{ width: '15%' }}>User</th>
+                                                }
+                                                {auth.user.roles[0].name === 'admin' &&
+                                                    <th scope="col" style={{ width: '15%' }}>Client</th>
+                                                }
+                                                {auth.user.roles[0].name === 'admin' &&
+                                                    <th scope="col" style={{ width: '15%' }}>Reseller</th>
                                                 }
                                                 <th scope="col" style={{ width: '15%' }}>Actions</th>
                                             </tr>
@@ -79,7 +89,13 @@ export default function InvitationIndex() {
                                                     {auth.user.roles[0].name === 'admin' &&
                                                         <td>{invitation.user.name}</td>
                                                     }
-                                                    <td className="text-center">
+                                                    {auth.user.roles[0].name === 'admin' &&
+                                                        <td>{invitation.client?.username}</td>
+                                                    }
+                                                    {auth.user.roles[0].name === 'admin' &&
+                                                        <td>{invitation.reseller?.username}</td>
+                                                    }
+                                                    <td className="text-center d-flex h-100">
                                                         <a href={`/i/${invitation.slug}`} target="_blank" className="btn btn-success btn-sm me-2"><i className="fa fa-eye"></i></a>
                                                         {hasAnyPermission(['invitations.edit']) &&
                                                             <Link href={`/account/invitations/${invitation.id}/edit`} className="btn btn-success btn-sm me-2"><i className="fa fa-pencil-alt"></i></Link>

@@ -22,6 +22,7 @@ export default function UserCreate() {
     const [name, setName] = useState("");
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
+    const [contact, setContact] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
     const [rolesData, setRolesData] = useState([]);
@@ -49,6 +50,7 @@ export default function UserCreate() {
             name: name,
             username: username,
             email: email,
+            contact: contact,
             password: password,
             password_confirmation: passwordConfirmation,
             roles: rolesData
@@ -116,6 +118,17 @@ export default function UserCreate() {
                                                 </div>
                                             )}
                                         </div>
+                                        <div className="col-md-6">
+                                            <div className="mb-3">
+                                                <label className="form-label fw-bold">Contact</label>
+                                                <input type="text" className="form-control" value={contact} onChange={(e) => setContact(e.target.value)} placeholder="Enter Contact" />
+                                            </div>
+                                            {errors.contact && (
+                                                <div className="alert alert-danger">
+                                                    {errors.contact}
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
 
                                     <div className="row">
@@ -130,6 +143,7 @@ export default function UserCreate() {
                                                 </div>
                                             )}
                                         </div>
+                                        
                                         <div className="col-md-6">
                                             <div className="mb-3">
                                                 <label className="form-label fw-bold">Password Confirmation</label>

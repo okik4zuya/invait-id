@@ -20,7 +20,7 @@ class ClientRSVPController extends Controller
     public function __invoke(Request $request){
 
         $invitation = Invitation::with('invitation_reservation')->where('client_id', $request->user()->id)->first();
-        $rsvp = InvitationReservation::whereBelongsTo($invitation)->paginate();
+        $rsvp = InvitationReservation::whereBelongsTo($invitation)->paginate(20);
         //dd($request->user()->id);
         //dd($invitation);
         return Inertia('Account/Client/RSVP/Index',[

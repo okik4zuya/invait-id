@@ -51,7 +51,7 @@ export default function RoleIndex() {
                     <div className="col-12">
                         <div className="card border-0 rounded shadow-sm border-top-success">
                             <div className="card-header">
-                                <span className="font-weight-bold"><i className="fa fa-shield-alt"></i> Template Categories</span>
+                                <span className="font-weight-bold"> Template Categories</span>
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
@@ -70,7 +70,7 @@ export default function RoleIndex() {
                                                     <td>{item.name}</td>
                                                     <td className="text-center">
                                                         {hasAnyPermission(['template-categories.edit']) &&
-                                                            <Link href={`/account/template-categories/${item.id}/edit`} className="btn btn-primary btn-sm me-2"><i className="fa fa-pencil-alt"></i></Link>
+                                                            <Link href={`/account/template-categories/${item.id}/edit`} className="btn btn-success btn-sm me-2"><i className="fa fa-pencil-alt"></i></Link>
                                                         }
                                                         {hasAnyPermission(['template-categories.delete']) &&
                                                             <Delete URL={'/account/template-categories'} id={item.id} />

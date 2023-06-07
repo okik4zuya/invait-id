@@ -31,7 +31,7 @@ export default function InvitationForm({
     const { url } = usePage();
     const { auth, errors, invitation, templates, custom_templates, client, reseller } = usePage().props;
     //console.log(JSON.parse(invitation.template))
-    console.log(usePage())
+    // console.log(usePage())
 
     //mapping template select options
     const templateOptions = templates?.map(item => ({ label: item.name, value: item.id }));
@@ -56,7 +56,6 @@ export default function InvitationForm({
     const [resellerUsername, setResellerUsername] = useState(isEdit ? reseller?.username : '');
 
     const [isYAMLEditor, setIsYAMLEditor] = useState(false);
-    console.log(invitation.custom_template)
 
     // console.log(customContent)
 
@@ -217,6 +216,7 @@ export default function InvitationForm({
             reseller_id: resellerId
         }, {
             onSuccess: () => {
+                Inertia.visit(url,{},{preserveState: true})
 
                 //show alert
                 Swal.fire({
@@ -261,7 +261,7 @@ export default function InvitationForm({
             <div className="col-12">
                 <div className="card border-0 shadow-sm border-top-success">
                     <div className="card-header">
-                        <span className="font-weight-bold"><i className="fa fa-shield-alt"></i> {header}</span>
+                        <span className="font-weight-bold"> {header}</span>
                     </div>
                     <div className="card-body">
                         <form onSubmit={isEdit ? updateInvitation : storeInvitation}>
@@ -315,7 +315,6 @@ export default function InvitationForm({
                                 <select
                                     className="form-select"
                                     value={status}
-                                    defaultValue="draft"
                                     onChange={(e) => setStatus(e.target.value)}
                                     disabled={!hasAnyPermission(['invitations.change-status'])}
                                 >
@@ -352,8 +351,7 @@ export default function InvitationForm({
                                     <label className="fw-bold">Select Template</label>
                                     <select
                                         className="form-select"
-                                        value={`aa`}
-                                        defaultValue={`aa`}
+                                        defaultValue={templateOptions.filter(item => item.value === invitation.template_id)[0].label}
                                         disabled={!hasAnyPermission(['invitations.change-template'])}
                                     >
                                         <option>{templateOptions.filter(item => item.value === invitation.template_id)[0].label}</option>

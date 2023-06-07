@@ -43,10 +43,10 @@ Route::get('/i/{slug}', [WebInvitationController::class, 'show'])->name('invitat
 // });
 
 //route register index
-Route::get('/register', [RegisterController::class, 'index'])->name('register')->middleware('guest');
+// Route::get('/register', [RegisterController::class, 'index'])->name('register')->middleware('guest');
 
 //route register store
-Route::post('/register', [RegisterController::class, 'store'])->name('register.store')->middleware('guest');
+// Route::post('/register', [RegisterController::class, 'store'])->name('register.store')->middleware('guest');
 
 //route login index
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');

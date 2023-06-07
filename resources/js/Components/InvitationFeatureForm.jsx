@@ -61,7 +61,7 @@ export default function InvitationFeatureForm({ data, setData }) {
         <div className=''>
             <ul className="nav nav-pills" id="pills-tab" role="tablist">
                 {features.map((feature, index) => (
-                    <>
+                    <div key={index}>
                         {feature.value.is_enabled === true &&
                             <li key={index} className="nav-item">
                                 <a
@@ -72,7 +72,7 @@ export default function InvitationFeatureForm({ data, setData }) {
                                 >{makeTitle(feature.key)}</a>
                             </li>
                         }
-                    </>
+                    </div>
                 ))}
             </ul>
             <div className="tab-content">

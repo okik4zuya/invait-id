@@ -29,7 +29,7 @@ export default function TemplateIndex() {
 
     //destruct props "invitations"
     const { templates } = usePage().props;
-    console.log(templates)
+    // console.log(templates)
 
     return (
         <>
@@ -58,7 +58,7 @@ export default function TemplateIndex() {
                     <div className="col-12">
                         <div className="card border-0 rounded">
                             <div className="card-header">
-                                <span className="font-weight-bold"><i className="fa fa-shield-alt"></i> Templates</span>
+                                <span className="font-weight-bold">Templates</span>
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
@@ -79,8 +79,8 @@ export default function TemplateIndex() {
                                                     <td>
                                                         <div className="category-field">
 
-                                                            {template.template_category.map((item, key) => (
-                                                                <div className="category-pill">{item.name}</div>
+                                                            {template.template_category.map((item, index) => (
+                                                                <div key={index} className="category-pill">{item.name}</div>
                                                             ))}
                                                         </div>
                                                     </td>
