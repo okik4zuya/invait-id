@@ -50,9 +50,9 @@ export default function InvitationForm({
     const [customCss, setCustomCss] = useState(isEdit ? invitation.custom_template?.css : templates[0]?.css);
     const [customContent, setCustomContent] = useState(isEdit ? invitation.custom_template?.content : templates[0]?.content);
     const [templateId, setTemplateId] = useState(isEdit ? invitation.template_id : templateOptions[0]?.value);
-    const [clientId, setClientId] = useState(isEdit ? invitation.client_id : 1);
+    const [clientId, setClientId] = useState(isEdit ? invitation.client_id : '');
     const [clientUsername, setClientUsername] = useState(isEdit ? client?.username : '');
-    const [resellerId, setResellerId] = useState(isEdit ? invitation.reseller_id : 1);
+    const [resellerId, setResellerId] = useState(isEdit ? invitation.reseller_id : '');
     const [resellerUsername, setResellerUsername] = useState(isEdit ? reseller?.username : '');
 
     const [isYAMLEditor, setIsYAMLEditor] = useState(false);
