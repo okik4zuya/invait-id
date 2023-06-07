@@ -377,7 +377,7 @@ export default function InvitationForm({
                                     {errors.template_id}
                                 </div>
                             )}
-                            {['admin', 'operator'].filter(item => item === auth.user.roles[0].name).length > 0 ?
+                            {['admin', 'operator'].filter(item => item === auth.user.roles[0].name)?.length > 0 ?
                                 <div className="d-flex">
                                     <div className="form-check form-switch mb-3">
                                         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={isYAMLEditor} onChange={e => setIsYAMLEditor(e.target.checked)} />
