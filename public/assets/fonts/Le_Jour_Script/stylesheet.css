@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Le Jour Script';
+    src: url('LeJour-Script.eot');
+    src: url('LeJour-Script.eot?#iefix') format('embedded-opentype'),
+        url('LeJour-Script.woff2') format('woff2'),
+        url('LeJour-Script.woff') format('woff'),
+        url('LeJour-Script.ttf') format('truetype'),
+        url('LeJour-Script.svg#LeJour-Script') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

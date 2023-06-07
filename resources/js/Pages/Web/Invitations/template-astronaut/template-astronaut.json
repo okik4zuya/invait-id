@@ -1,0 +1,470 @@
+{
+    "background": [
+        {
+            "id": 0,
+            "blocks": [
+                {
+                    "id": 0,
+                    "type": "img",
+                    "attributes": {
+                        "className": "u-w-full u-h-full",
+                        "src": "https://satumomen.com/themes/astronout/bg.gif"
+                    },
+                    "container_attributes": {
+                        "className": "position-absolute u-w-full u-top-0 u-left-0 u-right-0 u-bottom-0"
+                    }
+                },
+                {
+                    "id": 1,
+                    "type": "img",
+                    "attributes": {
+                        "className": "position-absolute u-w-full u-top-0 u-left-0 animate__animated animate__fadeInDown",
+                        "src": "https://satumomen.com/themes/astronout/frame-tm.png"
+                    }
+                },
+                {
+                    "id": 2,
+                    "type": "img",
+                    "attributes": {
+                        "className": "position-absolute u-w-full u-bottom-0 u-left-0 animate__animated animate__fadeInUp",
+                        "src": "https://satumomen.com/themes/astronout/frame-bm.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "blocks": [
+                {
+                    "id": 0,
+                    "type": "img",
+                    "attributes": {
+                        "className": "u-w-full u-h-full",
+                        "src": "https://satumomen.com/themes/astronout/bg.gif"
+                    },
+                    "container_attributes": {
+                        "className": "position-absolute u-w-full u-top-0 u-left-0 u-right-0 u-bottom-0"
+                    }
+                },
+                {
+                    "id": 1,
+                    "type": "img",
+                    "attributes": {
+                        "className": "position-absolute u-w-full u-top-0 u-left-0 animate__animated animate__fadeInDown",
+                        "src": "https://satumomen.com/themes/astronout/frame-tm.png"
+                    }
+                },
+                {
+                    "id": 2,
+                    "type": "img",
+                    "attributes": {
+                        "className": "position-absolute u-w-full u-bottom-0 u-left-0 animate__animated animate__fadeInUp",
+                        "src": "https://satumomen.com/themes/astronout/frame-bm.png"
+                    }
+                }
+            ]
+        }
+    ],
+    "pages": [
+        {
+            "id": 0,
+            "page_title": "Cover",
+            "background": 0,
+            "blocks": [
+                {
+                    "id": 1,
+                    "type": "div",
+                    "attributes": {
+                        "className": "tu-font-base tu-color-base u-fs-28 text-center animate__animated animate__fadeInDown"
+                    },
+                    "content": "judul"
+                },
+                {
+                    "id": 2,
+                    "type": "div",
+                    "attributes": {
+                        "className": "u-fs-64 tu-font-art tu-color-art animate__animated animate__fadeInDown animate__slow animate__delay"
+                    },
+                    "content": "mempelai"
+                },
+                {
+                    "id": 3,
+                    "type": "img",
+                    "attributes": {
+                        "className": "u-w-260px text-center",
+                        "src": "https://satumomen.com/themes/astronout/astronout.png"
+                    },
+                    "container_attributes": {
+                        "className": "container_image1_1 u-w-full d-flex justify-content-center animate__animated animate__zoomIn animate__slower"
+                    }
+                },
+                {
+                    "id": 4,
+                    "type": "wrapper",
+                    "attributes": {
+                        "className": "wrapper_kepada_yth animate__animated animate__fadeInUp animate__slower"
+                    },
+                    "blocks": [
+                        {
+                            "id": 1,
+                            "type": "div",
+                            "attributes": {
+                                "className": "kepada-yth text-white text-center"
+                            },
+                            "content": "Kepada Yth."
+                        },
+                        {
+                            "id": 2,
+                            "type": "div",
+                            "attributes": {
+                                "className": "invited-participant text-center"
+                            },
+                            "content": "Tamu Undangan"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "type": "open-invitation",
+                    "attributes": {
+                        "className": "animate__animated animate__zoomIn"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "page_title": "Opening",
+            "background": 1,
+            "thumb_icon": "bx bxs-home-circle",
+            "blocks": [
+                {
+                    "id": 1,
+                    "type": "div",
+                    "attributes": {
+                        "className": "tu-font-base tu-color-base u-fs-28 text-center animate__animated animate__fadeInDown"
+                    },
+                    "content": "judul"
+                },
+                {
+                    "id": 2,
+                    "type": "div",
+                    "attributes": {
+                        "className": "u-fs-64 tu-font-art tu-color-art animate__animated animate__fadeInDown animate__slow animate__delay"
+                    },
+                    "content": "mempelai"
+                },
+                {
+                    "id": 3,
+                    "type": "img",
+                    "attributes": {
+                        "className": "u-w-260px text-center",
+                        "src": "https://satumomen.com/themes/astronout/astronout.png"
+                    },
+                    "container_attributes": {
+                        "className": "container_image1_1 u-w-full d-flex justify-content-center animate__animated animate__zoomIn animate__slower"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "page_title": "Welcome",
+            "background": 1,
+            "thumb_icon": "bx bxs-notepad",
+            "blocks": [
+                {
+                    "id": 0,
+                    "type": "img",
+                    "attributes": {
+                        "className": "u-w-240px animate__animated animate__zoomIn animate__slow",
+                        "src": "https://satumomen.com/themes/astronout/astronout.png"
+                    },
+                    "container_attributes": {
+                        "className": "d-flex justify-content-center align-items-center"
+                    }
+                },
+                {
+                    "id": 1,
+                    "type": "div",
+                    "attributes": {
+                        "className": "u-font-italic u-font-base tu-color-base u-fs-28 text-center animate__animated animate__fadeInUp"
+                    },
+                    "content": "$text2_1"
+                },
+                {
+                    "id": 2,
+                    "type": "div",
+                    "attributes": {
+                        "className": "tu-font-art tu-color-art u-fs-48 text-center animate__animated animate__fadeInUp animate__delay"
+                    },
+                    "content": "$text2_2"
+                },
+                {
+                    "id": 3,
+                    "type": "div",
+                    "attributes": {
+                        "className": "u-mt-5 u-font-italic u-font-base tu-color-base u-fs-28 text-center animate__animated animate__fadeInUp animate__delay"
+                    },
+                    "content": "$text2_3"
+                },
+                {
+                    "id": 4,
+                    "type": "div",
+                    "attributes": {
+                        "className": "u-fs-28 sm:u-fs-22 u-font-base tu-color-base text-center animate__animated animate__fadeInUp animate__delay"
+                    },
+                    "content": "$text2_4"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "page_title": "Acara",
+            "background": 1,
+            "thumb_icon": "bx bxs-calendar",
+            "blocks": [
+                {
+                    "id": 1,
+                    "type": "div",
+                    "attributes": {
+                        "className": "title"
+                    },
+                    "content": "$text3_1"
+                },
+                {
+                    "id": 2,
+                    "type": "div",
+                    "attributes": {
+                        "className": "paragraf u-mt-2"
+                    },
+                    "content": "$text3_2"
+                },
+                {
+                    "id": 3,
+                    "type": "countdown",
+                    "attributes": {
+                        "className": "countdown mt-5"
+                    }
+                },
+                {
+                    "id": 4,
+                    "type": "add_calendar",
+                    "attributes": {
+                        "className": "btn-primary mt-3"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "page_title": "Maps",
+            "background": 1,
+            "thumb_icon": "bx bxs-map",
+            "blocks": [
+                {
+                    "id": 0,
+                    "type": "maps_iframe",
+                    "attributes": {
+                        "className": "u-mb-3 animate__animated animate__zoomIn animate__slower"
+                    }
+                },
+                {
+                    "id": 1,
+                    "type": "div",
+                    "attributes": {
+                        "className": "paragraf animate__animated animate__fadeInUp"
+                    },
+                    "content": "$text4_1"
+                },
+                {
+                    "id": 2,
+                    "type": "maps_button",
+                    "attributes": {
+                        "className": "btn-primary mt-3 animate__animated animate__fadeInUp  animate__animated animate__fadeInDown animate__delay"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "page_title": "Gift",
+            "background": 1,
+            "thumb_icon": "bx bxs-gift",
+            "blocks": [
+                {
+                    "id": 1,
+                    "type": "div",
+                    "attributes": {
+                        "className": "title animate__animated animate__fadeInDown"
+                    },
+                    "content": "$text5_1"
+                },
+                {
+                    "id": 2,
+                    "type": "div",
+                    "attributes": {
+                        "className": "u-mb-5 paragraf animate__animated animate__fadeInDown animate__delay animate__slower"
+                    },
+                    "content": "$text5_2"
+                },
+                {
+                    "id": 3,
+                    "type": "gift",
+                    "attributes": {
+                        "className": "gift animate__animated animate__fadeInUp animate__delay animate__slower"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "page_title": "Ucapan",
+            "background": 1,
+            "thumb_icon": "bx bxs-message-rounded-dots",
+            "blocks": [
+                {
+                    "id": 1,
+                    "type": "div",
+                    "attributes": {
+                        "className": "title animate__animated animate__fadeInDown"
+                    },
+                    "content": "$title_ucapan"
+                },
+                {
+                    "id": 2,
+                    "type": "div",
+                    "attributes": {
+                        "className": "u-mb-5 paragraf animate__animated animate__fadeInDown animate__delay animate__slower"
+                    },
+                    "content": "$narasi_ucapan"
+                },
+                {
+                    "id": 3,
+                    "type": "ucapan",
+                    "attributes": {
+                        "className": "ucapan animate__animated animate__fadeInUp animate__delay animate__slower"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "page_title": "RSVP",
+            "background": 1,
+            "thumb_icon": "bx bxs-calendar-check",
+            "blocks": [
+                {
+                    "id": 1,
+                    "type": "div",
+                    "attributes": {
+                        "className": "paragraf"
+                    },
+                    "content": "$text6_1"
+                },
+                {
+                    "id": 2,
+                    "type": "img",
+                    "attributes": {
+                        "className": "image6_1"
+                    },
+                    "content": "$image6_1"
+                },
+                {
+                    "id": 3,
+                    "type": "img",
+                    "attributes": {
+                        "className": "image6_2"
+                    },
+                    "content": "$image6_2"
+                },
+                {
+                    "id": 4,
+                    "type": "rsvp",
+                    "attributes": {
+                        "className": "rsvp"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "page_title": "Protokol",
+            "background": 1,
+            "thumb_icon": "bx bxs-check-shield",
+            "blocks": [
+                {
+                    "id": 1,
+                    "type": "div",
+                    "attributes": {
+                        "className": "title u-mb-4"
+                    },
+                    "content": "$text7_1"
+                },
+                {
+                    "id": 2,
+                    "type": "div",
+                    "attributes": {
+                        "className": "paragraf"
+                    },
+                    "content": "$text7_2"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "page_title": "Thanks",
+            "background": 1,
+            "thumb_icon": "bx bxs-message-square-check",
+            "blocks": [
+                {
+                    "id": 1,
+                    "type": "div",
+                    "attributes": {
+                        "className": "paragraf u-mb-6"
+                    },
+                    "content": "$text8_1"
+                },
+                {
+                    "id": 2,
+                    "type": "div",
+                    "attributes": {
+                        "className": "paragraf u-mb-6"
+                    },
+                    "content": "$text8_2"
+                },
+                {
+                    "id": 2,
+                    "type": "div",
+                    "attributes": {
+                        "className": "title"
+                    },
+                    "content": "$text8_3"
+                },
+                {
+                    "id": 3,
+                    "type": "wrapper",
+                    "attributes": {
+                        "className": "ucapan-gift d-flex u-mt-4 animate__animated animate__fadeInUp animate__slower"
+                    },
+                    "blocks": [
+                        {
+                            "id": 1,
+                            "type": "ucapan",
+                            "attributes": {
+                                "className": "u-mr-4"
+                            }
+                        },
+                        {
+                            "id": 2,
+                            "type": "gift",
+                            "attributes": {
+                                "className": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

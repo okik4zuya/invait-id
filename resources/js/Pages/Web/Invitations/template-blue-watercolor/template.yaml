@@ -1,0 +1,265 @@
+---
+background:
+- id: 0
+  blocks:
+  - id: 0
+    type: img
+    attributes:
+      src: https://ik.imagekit.io/xms0xbojr/Invait/Templates/wedding-blue-watercolor/bg-1__Small__4kkMyPHNK.png?updatedAt=1685720236239
+    container_attributes:
+      className: bg-1
+  - id: 1
+    type: img
+    attributes:
+      className: flower animate__animated animate__fadeInDown
+      src: https://ik.imagekit.io/xms0xbojr/Invait/Templates/wedding-blue-watercolor/flower__Small__9rXHcH3vn.png?updatedAt=1685720224741
+- id: 1
+  blocks:
+  - id: 0
+    type: img
+    attributes:
+      className: u-w-full u-h-full
+      src: https://ik.imagekit.io/xms0xbojr/Invait/Templates/wedding-blue-watercolor/bg-2__Small__Sg2eP9t8h.png?updatedAt=1685720238286
+    container_attributes:
+      className: bg-2
+pages:
+- id: 0
+  page_title: Cover
+  background: 0
+  blocks:
+  - type: div
+    attributes:
+      className: mempelai_1 animate__animated animate__fadeInRight
+    content: mempelai_1
+  - type: div
+    attributes:
+      className: dan animate__animated animate__zoomIn
+    content: d
+  - type: div
+    attributes:
+      className: mempelai_2 animate__animated animate__fadeInLeft
+    content: mempelai_2
+  - id: 5
+    type: open-invitation
+    attributes:
+      className: open-invitation
+- id: 1
+  page_title: Opening
+  background: 0
+  thumb_icon: bx bxs-home-circle
+  blocks:
+  - type: div
+    attributes:
+      className: mempelai_1 animate__animated animate__fadeInRight
+    content: mempelai_1
+  - type: div
+    attributes:
+      className: dan animate__animated animate__zoomIn
+    content: d
+  - type: div
+    attributes:
+      className: mempelai_2 animate__animated animate__fadeInLeft
+    content: mempelai_2
+  - type: div
+    attributes:
+      className: tanggal_cover
+    content: tanggal_cover
+- id: 2
+  page_title: Mempelai
+  background: 0
+  thumb_icon: bx bxs-heart
+  blocks:
+  - type: img
+    attributes:
+      className: gambar_mempelai_1 animate__animated animate__fadeInRight
+      src: gambar_mempelai_1
+    container_attributes:
+      className: container_gambar_mempelai_1
+  - type: div
+    attributes:
+      className: nama_mempelai_1 animate__animated animate__fadeInRight
+    content: nama_mempelai_1
+  - type: div
+    attributes:
+      className: ortu_mempelai_1 animate__animated animate__fadeInRight
+    content: ortu_mempelai_1
+  - type: img
+    attributes:
+      className: gambar_mempelai_2 animate__animated animate__fadeInLeft
+      src: gambar_mempelai_2
+    container_attributes:
+      className: container_gambar_mempelai_2
+  - type: div
+    attributes:
+      className: nama_mempelai_2 animate__animated animate__fadeInLeft
+    content: nama_mempelai_2
+  - type: div
+    attributes:
+      className: ortu_mempelai_2 animate__animated animate__fadeInLeft
+    content: ortu_mempelai_2
+- id: 3
+  page_title: Acara
+  background: 0
+  thumb_icon: bx bxs-calendar
+  blocks:
+  - type: div
+    attributes:
+      className: judul_akad title animate__animated animate__fadeInRight
+    content: judul_akad
+  - type: div
+    attributes:
+      className: tanggal_akad paragraf animate__animated animate__fadeInRight
+    content: tanggal_akad
+  - type: div
+    attributes:
+      className: jam_akad paragraf animate__animated animate__fadeInRight
+    content: jam_akad
+  - type: div
+    attributes:
+      className: lokasi_akad paragraf animate__animated animate__fadeInRight
+    content: lokasi_akad
+  - type: div
+    attributes:
+      className: judul_resepsi title animate__animated animate__fadeInLeft
+    content: judul_resepsi
+  - type: div
+    attributes:
+      className: tanggal_resepsi paragraf animate__animated animate__fadeInLeft
+    content: tanggal_resepsi
+  - type: div
+    attributes:
+      className: jam_resepsi paragraf animate__animated animate__fadeInLeft
+    content: jam_resepsi
+  - type: div
+    attributes:
+      className: lokasi_resepsi paragraf animate__animated animate__fadeInLeft
+    content: lokasi_resepsi
+  - type: countdown
+    attributes:
+      className: countdown-container animate__animated animate__zoomIn
+- id: 4
+  page_title: Maps
+  background: 0
+  thumb_icon: bx bxs-map
+  blocks:
+  - type: div
+    attributes:
+      className: judul_maps title animate__animated animate__fadeInDown
+    content: judul_maps
+  - type: maps_iframe
+    attributes:
+      className: maps_iframe animate__animated animate__zoomIn animate__delay
+  - type: div
+    attributes:
+      className: alamat_maps paragraf animate__animated animate__fadeInUp
+    content: alamat_maps
+  - type: maps_button
+    attributes:
+      className: maps_button btn-primary animate__animated animate__fadeInUp
+- id: 5
+  page_title: Gift
+  background: 0
+  thumb_icon: bx bxs-gift
+  blocks: []
+- id: 6
+  page_title: Ucapan
+  background: 0
+  thumb_icon: bx bxs-message-rounded-dots
+  blocks: []
+- id: 7
+  page_title: RSVP
+  background: 0
+  thumb_icon: bx bxs-calendar-check
+  blocks:
+  - type: div
+    attributes:
+      className: judul_doa title animate__animated animate__fadeInDown
+    content: judul_doa
+  - type: div
+    attributes:
+      className: doa_pengantin paragraf animate__animated animate__fadeInDown
+    content: doa_pengantin
+  - type: rsvp
+    attributes:
+      className: rsvp btn-primary animate__animated animate__fadeInUp
+  - type: div
+    attributes:
+      className: narasi_rsvp paragraf animate__animated animate__fadeInUp
+    content: narasi_rsvp
+- id: 8
+  page_title: Protokol
+  background: 0
+  thumb_icon: bx bxs-check-shield
+  blocks:
+  - type: div
+    attributes:
+      className: judul_protokol title animate__animated animate__fadeInLeft
+    content: judul_protokol
+  - type: div
+    attributes:
+      className: narasi_protokol paragraf animate__animated animate__fadeInLeft
+    content: narasi_protokol
+  - type: wrapper
+    attributes:
+      className: protokol_wrapper animate__animated animate__fadeInUp
+    blocks:
+    - type: wrapper
+      attributes:
+        className: protokol_item paragraf
+      blocks:
+      - type: i
+        attributes:
+          className: fa-solid fa-mask-face
+      - type: div
+        attributes:
+          className: paragraf
+        content: Memakai masker
+    - type: wrapper
+      attributes:
+        className: protokol_item paragraf
+      blocks:
+      - type: i
+        attributes:
+          className: fa-solid fa-hands-bubbles
+      - type: div
+        attributes:
+          className: paragraf
+        content: Mencuci tangan
+    - type: wrapper
+      attributes:
+        className: protokol_item paragraf
+      blocks:
+      - type: i
+        attributes:
+          className: fa-solid fa-people-arrows
+      - type: div
+        attributes:
+          className: paragraf
+        content: Menjaga jarak
+- id: 9
+  page_title: Thanks
+  background: 0
+  thumb_icon: bx bxs-message-square-check
+  blocks:
+  - type: div
+    attributes:
+      className: narasi_penutup paragraf animate__animated animate__fadeInDown
+    content: narasi_penutup
+  - type: div
+    attributes:
+      className: yang_mengundang paragraf  animate__animated animate__fadeInUp
+    content: yang_mengundang
+  - type: div
+    attributes:
+      className: kedua_pengantin title  animate__animated animate__fadeInUp
+    content: kedua_pengantin
+  - type: wrapper
+    attributes:
+      className: container_ucapan_gift  animate__animated animate__fadeInUp animate__delay
+    blocks:
+    - type: ucapan
+      attributes:
+        className: ucapan
+    - type: gift
+      attributes:
+        className: gift

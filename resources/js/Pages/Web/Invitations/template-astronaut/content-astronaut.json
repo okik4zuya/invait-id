@@ -1,0 +1,165 @@
+{
+    "pages": [
+        {
+            "id": 0,
+            "page_title": "Cover",
+            "judul": "Tasyakuran <br> Khitan",
+            "mempelai": "Fatih"
+        },
+        {
+            "id": 1,
+            "page_title": "Opening",
+            "judul": "Tasyakuran <br> Khitan",
+            "mempelai": "Fatih"
+        },
+        {
+            "id": 2,
+            "page_title": "Welcome",
+            "$text2_1": "Tasyakuran Aqiqah",
+            "$text2_2": "Fatih Zamzami",
+            "$text2_3": "Anak Pertama",
+            "$text2_4": "Hasan dan Hasanah"
+        },
+        {
+            "id": 3,
+            "page_title": "Acara",
+            "$text3_1": "Tasyakuran Aqiqah",
+            "$text3_2": "Sabtu, 20 Mei 2023 <br> Pukul 10.00 <br> Rumah Fatih",
+            "$text3_3": "Pukul 10.00 WIB",
+            "$text3_4": "Rumah Fatih"
+        },
+        {
+            "id": 4,
+            "page_title": "Maps",
+            "$text4_1": "Rumah Fatih"
+        },
+        {
+            "id": 5,
+            "page_title": "Gift",
+            "$text5_1": "Beri Hadiah",
+            "$text5_2": "Terima kasih telah menambah semangat kegembiraan pernikahan kami dengan kehadiran dan hadiah indah Anda."
+        },
+        {
+            "id": 6,
+            "page_title": "Ucapan",
+            "$title_ucapan": "Beri Ucapan",
+            "$narasi_ucapan": "Klik tombol di bawah ini untuk memberikan ucapan."
+        },
+        {
+            "id": 7,
+            "page_title": "RSVP",
+            "$text6_1": "Kirim ucapan untuk konfirmasi kehadiran",
+            "$image6_1": "",
+            "$image6_2": ""
+        },
+        {
+            "id": 8,
+            "page_title": "Protokol",
+            "$text7_1": "Protokol Kesehatan",
+            "$text7_2": "Kami menghimbau kepada Bapak/Ibu?Saudara/I tamu undangan agar tetap memperhatikan protokol kesehatan."
+        },
+        {
+            "id": 9,
+            "page_title": "Thanks",
+            "$text8_1": "Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila teman-teman, berkanan hadir dan memberikan do'a.",
+            "$text8_2": "Best Regards",
+            "$text8_3": "Fatih"
+        }
+    ],
+    "features": {
+        "open-invitation":{
+            "is_enabled": true,
+            "data": {
+                "button_title": "Buka undangan"
+            }
+        },
+        "audio": {
+            "is_enabled": true,
+            "data": {
+                "src": "https://res.cloudinary.com/diztl7cl4/video/upload/v1657341994/jauzatu/Audio/Sigma_-_Kupu_kupu_cinta_yfftfi.mp3"
+            }
+        },
+        "countdown": {
+            "is_enabled": true,
+            "data": {
+                "date": "Dec 13, 2023 11:13:00"
+            }
+        },
+        "rsvp": {
+            "is_enabled": true,
+            "is_page_enabled": false,
+            "data": {
+                "title": "Konfirmasi Kehadiran",
+                "button_title": "Konfirmasi Kehadiran"
+            }
+        },
+        "ucapan": {
+            "is_enabled": true,
+            "is_page_enabled": false,
+            "data": {
+                "title": "Beri Ucapan",
+                "button_title": "Beri Ucapan",
+                "narration": "Klik tombol di bawah ini untuk memberi ucapan kepada mempelai."
+            }
+        },
+        "gift": {
+            "is_enabled": true,
+            "is_page_enabled": false,
+            "data": {
+                "title": "Beri Hadiah",
+                "button_title": "Beri Hadiah",
+                "narration": "Terima kasih telah menambah semangat kegembiraan pernikahan kami dengan kehadiran dan hadiah indah Anda.",
+                "accounts": [
+                    {
+                        "id": 1,
+                        "type": "Bank",
+                        "title": "Bank BCA",
+                        "logo": "https://res.cloudinary.com/diztl7cl4/image/upload/v1648868806/jauzatu/bca_tho4gp.png",
+                        "name": "Hasan",
+                        "account": "012345678"
+                    },
+                    {
+                        "id": 2,
+                        "type": "e-Wallet",
+                        "title": "DANA",
+                        "logo": "https://res.cloudinary.com/diztl7cl4/image/upload/v1648871634/jauzatu/dana_zehwfq.png",
+                        "name": "Hasan",
+                        "account": "081234567"
+                    },
+                    {
+                        "id": 3,
+                        "type": "Alamat",
+                        "title": "Rumah Fatih",
+                        "logo": "",
+                        "name": "Hasan",
+                        "address": "Jl. Kamboja No. 20, Kota Bandung"
+                    }
+                ]
+            }
+        },
+        "add_calendar": {
+            "is_enabled": true,
+            "data": {
+                "button_title": "Add to Calendar",
+                "event_link": "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MTN0bmhhZmlubGs3dnUzbmZtdW0wMXA2dTkgNjVlODM0N2I4YjM2N2E3ZmRjZDM4M2VlMjFmOWYyZDk0YmE3YWQ0ZGI4MGI2ZGU3ZGMyNzdlYzA0NTQ2NGYwNkBn&tmsrc=65e8347b8b367a7fdcd383ee21f9f2d94ba7ad4db80b6de7dc277ec045464f06%40group.calendar.google.com"
+            }
+        },
+        "maps": {
+            "is_enabled": true,
+            "is_page_enabled": true
+        },
+        "maps_iframe": {
+            "is_enabled": true,
+            "data": {
+                "iframe_link": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3960.920423236036!2d107.6259654!3d-6.9001204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7b394d93a91%3A0x6cd6a249b02f7!2sMasjid%20Pusdai!5e0!3m2!1sid!2sid!4v1684997230943!5m2!1sid!2sid"
+            }
+        },
+        "maps_button": {
+            "is_enabled": true,
+            "data": {
+                "maps_link": "https://www.google.com/maps/place/PUSDAI+Jawa+Barat,+Jl.+Diponegoro+No.63,+Cihaur+Geulis,+Cibeunying+Kaler,+Bandung+City,+West+Java+40122/@-6.9001204,107.6259654,17z/data=!4m6!3m5!1s0x2e68e7b394d93a91:0x6cd6a249b02f7!8m2!3d-6.9001204!4d107.6259654!16s%2Fg%2F12hvyqdpy",
+                "button_title": "Buka Lokasi"
+            }
+        }
+    }
+}

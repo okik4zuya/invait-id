@@ -1,0 +1,40 @@
+
+        /**
+         * Validate request
+         */
+        $requestData = $request->validate([
+            'title'          => 'required',
+            'slug'   => 'required|unique:invitations,slug,' . $invitation->id,
+            'status' => 'required',
+            'thumbnail'   => 'required',
+            'excerpt' => 'nullable',
+            'user_id' => 'required',
+            'template_id' => 'required',
+            'is_custom_template' => 'required',
+            'is_custom_css' => 'required',
+            'is_custom_content' => 'required',
+            'custom_template' => 'nullable',
+            'custom_css' => 'nullable',
+            'custom_content' => 'nullable',
+        ]);
+
+
+        $invitationData = [
+            'title' => request()->title,
+            'slug' => request()->slug,
+            'status' => request()->status,
+            'thumbnail' => request()->thumbnail,
+            'excerpt' => request()->excerpt,
+            'user_id' => request()->user_id,
+            'template_id' => request()->template_id,
+            'is_custom_template' => request()->is_custom_template,
+            'is_custom_css' => request()->is_custom_css,
+            'is_custom_content' => request()->is_custom_content,
+        ];
+        $customTemplateData = [
+            'invitation_id' => $invitation->id,
+            'template_id' => request()->template_id,
+            'template' => request()->custom_template,
+            'css' => request()->custom_css,
+            'content' => request()->custom_content,
+        ];

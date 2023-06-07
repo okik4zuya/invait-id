@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+:root {
+    --color-bg: #041763;
+    --color-base: #ffffff;
+    --color-art: #DE912F;
+    --color-bg-menu: #041763;
+    --color-bg-menu-active: #041763;
+    --color-menu: #ffffff;
+    --color-menu-active: #DE912F;
+    --color-border: #DE912F;
+    --color-button: #DE912F;
+    --font-base: 'Nunito', sans-serif;
+    --font-art: 'Chewy', cursive;
+    --font-alt: 'Nunito', cursive;
+}
+
+/*-----Template Utilities-----*/
+.tu-bg-bg {
+    background-color: var(--color-bg);
+}
+
+.tu-bg-base {
+    background-color: var(--color-base);
+}
+
+.tu-bg-art {
+    background-color: var(--color-art);
+}
+
+.tu-color-bg {
+    color: var(--color-bg);
+}
+
+.tu-color-base {
+    color: var(--color-base);
+}
+
+.tu-color-art {
+    color: var(--color-art);
+}
+
+.tu-font-base {
+    font-family: var(--font-base);
+}
+
+.tu-font-alt {
+    font-family: var(--font-alt);
+}
+
+.tu-font-art {
+    font-family: var(--font-art);
+}
+
+/*--------------------------*/
+#main-slider{
+    background-image: url('https://satumomen.com/themes/astronout/bg.gif');
+    background-position: center;
+    background-size: "100% 100%";
+}
+.btn-primary {
+    background-color: var(--color-button);
+    color: white;
+    border-radius: 50px;
+    padding: 6px 12px;
+    font-weight: 700;
+    font-family: var(--font-base);
+    font-size: 16px;
+    border: none;
+}
+
+#thumb-slider {
+    background-color: var(--color-bg);
+}
+
+.menu-thumb {
+    background-color: var(--color-bg-menu);
+    color: var(--color-menu);
+    font-weight: 700;
+    font-size: 12px;
+    font-family: var(--font-base);
+}
+
+.menu-thumb.is-active {
+    color: var(--color-menu-active);
+}
+
+.menu-thumb__icon {
+    font-size: 32px;
+}
+
+.content-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-family: var(--font-art);
+    color: var(--color-art);
+    font-size: 36px;
+    line-height: 125%;
+    text-align: center;
+}
+
+.paragraf {
+    font-family: var(--font-base);
+    color: white;
+    font-size: 24px;
+    line-height: 125%;
+    text-align: center;
+}
+
+.wrapper_kepada_yth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 50%;
+    height: 80px;
+    margin: auto;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid white;
+    font-weight: 700;
+    font-size: 16px;
+
+}
+
+.invited-participant {
+    color: var(--color-art);
+}
+
+
+/**--- CSS for Features ---**/
+.play-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 80px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-art);
+    color: var(--color-base);
+    font-size: 28px;
+    z-index: 9;
+}
+
+.countdown-container {
+    display: flex;
+}
+
+.countdown-card {
+    width: 70px;
+    background-color: var(--color-art);
+    border-radius: 8px;
+    margin: 4px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-card__tick {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: -10px;
+}
+
+.countdown-card__label {
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+}
+
+.maps-iframe {
+    width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    padding: 8px;
+}
+
+.message__date {
+    font-family: var(--font-base);
+    font-size: 12px;
+}
+
+.message__name {
+    font-family: var(--font-base);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.message__message {
+    font-family: var(--font-base);
+    font-size: 18px;
+    font-style: italic;
+
+}

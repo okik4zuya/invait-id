@@ -1,0 +1,125 @@
+---
+pages:
+- id: 0
+  page_title: Cover
+  mempelai_1: Bulan
+  mempelai_2: Bintang
+- id: 1
+  page_title: Opening
+  mempelai_1: Bulan
+  mempelai_2: Bintang
+  tanggal_cover: '08.08.2024'
+- id: 2
+  page_title: Mempelai
+  gambar_mempelai_1: https://ik.imagekit.io/xms0xbojr/Einvit/Avatar/avatar-wanita-01_JdfTace6y.png?updatedAt=1664262756967
+  nama_mempelai_1: Bulan Citra Lestari
+  ortu_mempelai_1: Putra ke-2 dari Bapak Hasan dan Ibu Hasanah
+  gambar_mempelai_2: https://ik.imagekit.io/xms0xbojr/Einvit/Avatar/avatar-pria-01_INuZucrOAo.png?updatedAt=1664262757104
+  nama_mempelai_2: Bintang Terang
+  ortu_mempelai_2: Putri ke-2 dari Bapak Mahmud dan Ibu Mahmudah
+- id: 3
+  page_title: Acara
+  judul_akad: Akad Nikah
+  tanggal_akad: Ahad, 18 Agustus 2024
+  jam_akad: Pukul 09.00 s.d. selesai
+  lokasi_akad: PUSDAI Bandung <br> Jl. Diponegoro No. 63, Kota Bandung
+  judul_resepsi: Resepsi
+  tanggal_resepsi: Ahad, 18 Agustus 2024
+  jam_resepsi: Pukul 01.00 s.d. selesai
+  lokasi_resepsi: PUSDAI Bandung <br> Jl. Diponegoro No. 63, Kota Bandung
+- id: 4
+  page_title: Maps
+  judul_maps: Lokasi
+  alamat_maps: PUSDAI Bandung <br> Jl. Diponegoro No. 63, Kota Bandung
+- id: 5
+  page_title: Gift
+- id: 6
+  page_title: Ucapan
+- id: 7
+  page_title: RSVP
+  judul_doa: Do'a untuk Pengantin
+  doa_pengantin: Semoga Allah memberkahimu di waktu bahagia dan memberkahimu di waktu
+    susah, dan mengumpulkan kalian berdua dalam kebaikan
+  narasi_rsvp: Tekan tombol di bawah ini untuk konfirmasi kehadiran.
+  catatan_rsvp: Batas akhir konfirmasi <br> 10 Agustus 2024
+- id: 8
+  page_title: Protokol
+  judul_protokol: Protokol Kesehatan
+  narasi_protokol: Kami menghimbau kepada Bapak/Ibu/Saudara/I tamu undangan yang hadir
+    agar senantiasa memperhatikan protokol kesehatan.
+- id: 9
+  page_title: Thanks
+  narasi_penutup: Merupakan suatu kebahagiaan bagi kami atas kehadiran dan doa restu
+    Bapak/Ibu/Saudara/I di acara pernikahan kami.
+  yang_mengundang: Kami yang mengundang
+  kedua_pengantin: Bulan dan Bintang
+features:
+  open-invitation:
+    is_enabled: true
+    data:
+      button_title: Buka undangan
+  audio:
+    is_enabled: true
+    data:
+      src: https://res.cloudinary.com/diztl7cl4/video/upload/v1657341994/jauzatu/Audio/Sigma_-_Kupu_kupu_cinta_yfftfi.mp3
+  countdown:
+    is_enabled: true
+    data:
+      date: Dec 13, 2023 11:13:00
+  rsvp:
+    is_enabled: true
+    is_page_enabled: true
+    data:
+      title: Konfirmasi Kehadiran
+      button_title: Konfirmasi Kehadiran
+  ucapan:
+    is_enabled: true
+    is_page_enabled: false
+    data:
+      title: Beri Ucapan
+      button_title: Beri Ucapan
+      narration: Klik tombol di bawah ini untuk memberi ucapan kepada mempelai.
+  gift:
+    is_enabled: true
+    is_page_enabled: false
+    data:
+      title: Beri Hadiah
+      button_title: Beri Hadiah
+      narration: Terima kasih telah menambah semangat kegembiraan pernikahan kami
+        dengan kehadiran dan hadiah indah Anda.
+      accounts:
+      - id: 1
+        type: Bank
+        title: Bank BCA
+        logo: https://res.cloudinary.com/diztl7cl4/image/upload/v1648868806/jauzatu/bca_tho4gp.png
+        name: Hasan
+        account: '012345678'
+      - id: 2
+        type: e-Wallet
+        title: DANA
+        logo: https://res.cloudinary.com/diztl7cl4/image/upload/v1648871634/jauzatu/dana_zehwfq.png
+        name: Hasan
+        account: '081234567'
+      - id: 3
+        type: Alamat
+        title: Rumah Fatih
+        logo: ''
+        name: Hasan
+        address: Jl. Kamboja No. 20, Kota Bandung
+  add_calendar:
+    is_enabled: true
+    data:
+      button_title: Add to Calendar
+      event_link: https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MTN0bmhhZmlubGs3dnUzbmZtdW0wMXA2dTkgNjVlODM0N2I4YjM2N2E3ZmRjZDM4M2VlMjFmOWYyZDk0YmE3YWQ0ZGI4MGI2ZGU3ZGMyNzdlYzA0NTQ2NGYwNkBn&tmsrc=65e8347b8b367a7fdcd383ee21f9f2d94ba7ad4db80b6de7dc277ec045464f06%40group.calendar.google.com
+  maps:
+    is_enabled: true
+    is_page_enabled: true
+  maps_iframe:
+    is_enabled: true
+    data:
+      iframe_link: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3960.920423236036!2d107.6259654!3d-6.9001204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7b394d93a91%3A0x6cd6a249b02f7!2sMasjid%20Pusdai!5e0!3m2!1sid!2sid!4v1684997230943!5m2!1sid!2sid
+  maps_button:
+    is_enabled: true
+    data:
+      maps_link: https://www.google.com/maps/place/PUSDAI+Jawa+Barat,+Jl.+Diponegoro+No.63,+Cihaur+Geulis,+Cibeunying+Kaler,+Bandung+City,+West+Java+40122/@-6.9001204,107.6259654,17z/data=!4m6!3m5!1s0x2e68e7b394d93a91:0x6cd6a249b02f7!8m2!3d-6.9001204!4d107.6259654!16s%2Fg%2F12hvyqdpy
+      button_title: Buka Lokasi
