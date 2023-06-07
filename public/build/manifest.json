@@ -574,21 +574,21 @@
     "file": "assets/Index.d7ff9a9a.css",
     "src": "resources/js/Pages/Account/Templates/Index.css"
   },
+  "Web.css": {
+    "file": "assets/Web.70bd183d.css",
+    "src": "Web.css"
+  },
   "splide-core.css": {
     "file": "assets/splide-core.0471d8ba.css",
     "src": "splide-core.css"
-  },
-  "resources/js/Pages/Web/Home/Index.css": {
-    "file": "assets/Index.2c8ba7b3.css",
-    "src": "resources/js/Pages/Web/Home/Index.css"
   },
   "resources/js/Pages/Web/Tema/Index.css": {
     "file": "assets/Index.05824e02.css",
     "src": "resources/js/Pages/Web/Tema/Index.css"
   },
-  "Web.css": {
-    "file": "assets/Web.70bd183d.css",
-    "src": "Web.css"
+  "resources/js/Pages/Web/Home/Index.css": {
+    "file": "assets/Index.2c8ba7b3.css",
+    "src": "resources/js/Pages/Web/Home/Index.css"
   },
   "resources/js/Pages/Web/Invitations/Show.css": {
     "file": "assets/Show.fa73b7fc.css",

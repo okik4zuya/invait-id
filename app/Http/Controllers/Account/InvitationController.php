@@ -100,7 +100,6 @@ class InvitationController extends Controller
             'is_custom_content' => 'required',
             'custom_template' => 'nullable',
             'custom_css' => 'nullable',
-            'custom_content' => 'nullable',
         ]);
 
         $invitationData = Invitation::create([
@@ -114,7 +113,6 @@ class InvitationController extends Controller
             'reseller_id' => request()->reseller_id,
             'template_id' => request()->template_id,
             'is_custom_template' => request()->is_custom_template,
-            'custom_template' => request()->custom_template,
         ]);
 
 
@@ -206,7 +204,6 @@ class InvitationController extends Controller
             'is_custom_content' => 'required',
             'custom_template' => 'nullable',
             'custom_css' => 'nullable',
-            'custom_content' => 'nullable',
         ]);
 
 
