@@ -36,7 +36,7 @@ export default function TemplateForm({
 
     //define states
     const [name, setName] = useState(isEdit ? templateItem.name : '');
-    const [templateCategoryIdArray, setTemplateCategoryIdArray] = useState(isEdit ? templateItem.template_category.map(item=>item.id) : [template_categories[0].id]);
+    const [templateCategoryIdArray, setTemplateCategoryIdArray] = useState(isEdit ? templateItem.template_category.map(item=>item.id) : [template_categories[0]?.id]);
     const [templateCategory, setTemplateCategory] = useState(isEdit ? templateItem.template_category.map(item=>({label: item.name, value: item.id})) : [templateCategoryOptions[0]]);
     const [previewSlug, setPreviewSlug] = useState(isEdit ? templateItem.preview_slug : '');
     const [thumbnail, setThumbnail] = useState(isEdit ? templateItem.thumbnail : '');

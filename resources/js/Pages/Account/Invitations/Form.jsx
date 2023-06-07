@@ -46,10 +46,10 @@ export default function InvitationForm({
     const [isCustomTemplate, setIsCustomTemplate] = useState(isEdit ? invitation.is_custom_template : false);
     const [isCustomCss, setIsCustomCss] = useState(isEdit ? invitation.is_custom_template : false);
     const [isCustomContent, setIsCustomContent] = useState(isEdit ? invitation.is_custom_template : false);
-    const [customTemplate, setCustomTemplate] = useState(isEdit ? invitation.custom_template?.template : templates[0].template);
-    const [customCss, setCustomCss] = useState(isEdit ? invitation.custom_template?.css : templates[0].css);
-    const [customContent, setCustomContent] = useState(isEdit ? invitation.custom_template?.content : templates[0].content);
-    const [templateId, setTemplateId] = useState(isEdit ? invitation.template_id : templateOptions[0].value);
+    const [customTemplate, setCustomTemplate] = useState(isEdit ? invitation.custom_template?.template : templates[0]?.template);
+    const [customCss, setCustomCss] = useState(isEdit ? invitation.custom_template?.css : templates[0]?.css);
+    const [customContent, setCustomContent] = useState(isEdit ? invitation.custom_template?.content : templates[0]?.content);
+    const [templateId, setTemplateId] = useState(isEdit ? invitation.template_id : templateOptions[0]?.value);
     const [clientId, setClientId] = useState(isEdit ? invitation.client_id : '');
     const [clientUsername, setClientUsername] = useState(isEdit ? client?.username : '');
     const [resellerId, setResellerId] = useState(isEdit ? invitation.reseller_id : '');
