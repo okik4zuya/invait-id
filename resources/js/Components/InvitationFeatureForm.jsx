@@ -57,7 +57,6 @@ export default function InvitationFeatureForm({ data, setData }) {
         setData(YAML.stringify(newData))
 
     }
-    console.log(data.features['gift'].data.accounts)
     return (
         <div className=''>
             <ul className="nav nav-pills" id="pills-tab" role="tablist">

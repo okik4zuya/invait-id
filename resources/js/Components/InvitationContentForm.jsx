@@ -56,7 +56,7 @@ export default function InvitationContentForm({ data, setData }) {
                     <li key={key} className="nav-item">
                         <a
                             className={`nav-link ${activeTab === page.page_title && 'active'}`}
-                            id={`pills-${slugify(page.page_title)}-tab`}
+                            id={`pills-${slugify(page?.page_title)}-tab`}
                             type="button"
                             onClick={() => setActivetab(page.page_title)}
                         >{page.page_title}</a>
