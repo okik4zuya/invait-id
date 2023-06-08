@@ -179,7 +179,7 @@ export default function InvitationShow() {
                 <Modal isShow={isModalUcapanShow} onClose={() => setIsModalUcapanShow(false)}><Ucapan data={getFeatureData('ucapan')} messages={invitation.invitation_message} /> </Modal>
                 <Modal isShow={isModalRsvpShow} onClose={() => setIsModalRsvpShow(false)}><Reservation data={getFeatureData('rsvp')} /> </Modal>
                 <div
-                    className={`cover-container animate__animated ${isCoverShow == false && "cover-container--out"}`}
+                    className={`cover-container ${isCoverShow == false && "cover-container--out"}`}
                 >
                     <div className='background-container'>
                         {backgroundToRender() && backgroundToRender()[0].blocks.map((block, key) => (
