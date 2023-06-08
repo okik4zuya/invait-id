@@ -161,9 +161,9 @@ export default function InvitationShow() {
         mainSlider.mount();
         thumbSlider.mount();
 
-        mainSlider.on('move', (index) => {
-            setPageIndex(index);
-        })
+        // mainSlider.on('move', (index) => {
+        //     setPageIndex(index);
+        // })
 
         //replace template with custom content
         parsedContent && replaceTemplate()
