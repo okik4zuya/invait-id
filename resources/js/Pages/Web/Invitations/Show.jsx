@@ -147,6 +147,7 @@ export default function InvitationShow() {
             height: "calc(100vh - 70px)",
             direction: 'ttb',
             pagination: false,
+            dragMinThreshold: 2
         });
         var thumbSlider = new Splide('#thumb-slider', {
             arrows: false,
