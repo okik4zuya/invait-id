@@ -147,7 +147,7 @@ export default function InvitationShow() {
             height: "100%",
             direction: 'ttb',
             pagination: false,
-            dragMinThreshold: 2
+            dragMinThreshold: 2,
         });
         var thumbSlider = new Splide('#thumb-slider', {
             arrows: false,
@@ -155,14 +155,20 @@ export default function InvitationShow() {
             height: "70px",
             pagination: false,
             isNavigation: true,
-            focus: "center"
+            focus: "center",
         });
         mainSlider.sync(thumbSlider);
         mainSlider.mount();
         thumbSlider.mount();
 
-        mainSlider.on('move', (index) => {
+        mainSlider.on('move', (index, prevIndex) => {
+            const el = document.querySelectorAll('#main-slider .splide__slide')
+            el[prevIndex].style.display = 'none';
             setPageIndex(index);
+        })
+        mainSlider.on('drag', function(e){
+            console.log(pageIndex)
+
         })
 
         //replace template with custom content
@@ -216,41 +222,43 @@ export default function InvitationShow() {
                     <div className="splide__track">
                         <ul className="splide__list">
                             {pagesToRender() && pagesToRender().slice(1).map((page, pageKey) => (
-                                <li key={pageKey} className={`page-${pageKey + 1} h-100 splide__slide d-flex align-items-center justify-content-center position-relative`}>
-                                    {/* {pageIndex === pageKey && */}
-                                        <div className='background-container'>
-                                            {pageIndex === pageKey && backgroundToRender() && backgroundToRender()[page.background].blocks.map((block, key) => (
-                                                <Block
-                                                    key={key}
-                                                    type={block.type}
-                                                    className={block.className}
-                                                    attributes={block.attributes}
-                                                    container_attributes={block.container_attributes}
-                                                    content={block.content}
-                                                    blocks={block.blocks}
-                                                    data={getFeatureData(block.type)}
-                                                    getFeatureData={getFeatureData}
-                                                />
-                                            ))}
-                                        </div>
-                                    {/* }
-                                    {pageIndex === pageKey && */}
-                                        <div className='content-frame'>
-                                            {pageIndex === pageKey && page.blocks.map((block, key) => (
-                                                <Block
-                                                    key={key}
-                                                    type={block.type}
-                                                    className={block.className}
-                                                    attributes={block.attributes}
-                                                    container_attributes={block.container_attributes}
-                                                    content={block.content}
-                                                    blocks={block.blocks}
-                                                    data={getFeatureData(block.type)}
-                                                    getFeatureData={getFeatureData}
-                                                />
-                                            ))}
-                                        </div>
-                                    {/* } */}
+                                <li key={pageKey}
+                                    className={`page-${pageKey + 1} h-100 splide__slide d-flex align-items-center justify-content-center position-relative`}
+                                >
+                                    {pageIndex === pageKey &&
+                                    <div className='background-container'>
+                                        {backgroundToRender() && backgroundToRender()[page.background].blocks.map((block, key) => (
+                                            <Block
+                                                key={key}
+                                                type={block.type}
+                                                className={block.className}
+                                                attributes={block.attributes}
+                                                container_attributes={block.container_attributes}
+                                                content={block.content}
+                                                blocks={block.blocks}
+                                                data={getFeatureData(block.type)}
+                                                getFeatureData={getFeatureData}
+                                            />
+                                        ))}
+                                    </div>
+                                    }
+                                    {pageIndex === pageKey &&
+                                    <div className='content-frame'>
+                                        {page.blocks.map((block, key) => (
+                                            <Block
+                                                key={key}
+                                                type={block.type}
+                                                className={block.className}
+                                                attributes={block.attributes}
+                                                container_attributes={block.container_attributes}
+                                                content={block.content}
+                                                blocks={block.blocks}
+                                                data={getFeatureData(block.type)}
+                                                getFeatureData={getFeatureData}
+                                            />
+                                        ))}
+                                    </div>
+                                    }
                                 </li>
 
                             ))}
