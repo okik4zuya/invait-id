@@ -33,9 +33,9 @@ export default function Block(props) {
         setIsAudioPlay(true)
         setIsCoverShow(false)
         setPageIndex(0)
-        // if (document.body.requestFullscreen) {
-        //     document.body.requestFullscreen()
-        // }
+        if (document.body.requestFullscreen) {
+            document.body.requestFullscreen()
+        }
     }
 
     switch (props.type) {
