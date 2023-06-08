@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Bryndan Write';
+    src: url('BryndanWrite.eot');
+    src: url('BryndanWrite.eot?#iefix') format('embedded-opentype'),
+        url('BryndanWrite.woff2') format('woff2'),
+        url('BryndanWrite.woff') format('woff'),
+        url('BryndanWrite.ttf') format('truetype'),
+        url('BryndanWrite.svg#BryndanWrite') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CMU Serif Roman';
+    font-style: normal;
+    font-weight: normal;
+    src: local('CMU Serif Roman'), url('cmunrm.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'CMU Serif Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('CMU Serif Italic'), url('cmunti.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'CMU Serif Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('CMU Serif Bold'), url('cmunbx.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'CMU Serif BoldItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('CMU Serif BoldItalic'), url('cmunbi.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Daydream';
+    src: url('Daydream.eot');
+    src: url('Daydream.eot?#iefix') format('embedded-opentype'),
+        url('Daydream.woff2') format('woff2'),
+        url('Daydream.woff') format('woff'),
+        url('Daydream.ttf') format('truetype'),
+        url('Daydream.svg#Daydream') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Le Jour Script';
+    src: url('LeJour-Script.eot');
+    src: url('LeJour-Script.eot?#iefix') format('embedded-opentype'),
+        url('LeJour-Script.woff2') format('woff2'),
+        url('LeJour-Script.woff') format('woff'),
+        url('LeJour-Script.ttf') format('truetype'),
+        url('LeJour-Script.svg#LeJour-Script') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
