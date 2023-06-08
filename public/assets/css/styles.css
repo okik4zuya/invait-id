@@ -699,6 +699,9 @@ input[type=number]:focus,
   --color-carrara: #e5e6dd;
   --green-invait: #1b4254;
 }
+#main-slider{
+  height: 100%;
+}
 
 .color-ripe-lemon {
   color: var(--color-ripe-lemon);
