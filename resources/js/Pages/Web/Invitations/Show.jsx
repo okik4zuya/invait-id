@@ -144,7 +144,7 @@ export default function InvitationShow() {
         var mainSlider = new Splide('#main-slider', {
             arrows: false,
             width: "100vw",
-            height: "calc(100% - 70px)",
+            height: "100%",
             direction: 'ttb',
             pagination: false,
             dragMinThreshold: 2
