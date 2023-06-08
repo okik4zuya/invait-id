@@ -1,0 +1,1 @@
+import{R as e}from"./app.106d0b34.js";function a({onClose:t}){return e.createElement("div",{className:"position-fixed animate__animated animate__fadeInDown rounded-circle u-w-10 u-h-10 u-top-2 u-right-2 u-fs-28 d-flex justify-content-center align-items-center",style:{background:"#e7e7e7",color:"#737373"},onClick:t},e.createElement("i",{className:"bx bx-x"}))}export{a as default};
