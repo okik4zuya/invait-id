@@ -217,7 +217,7 @@ export default function InvitationShow() {
                         <ul className="splide__list">
                             {pagesToRender() && pagesToRender().slice(1).map((page, pageKey) => (
                                 <li key={pageKey} className={`page-${pageKey + 1} splide__slide d-flex align-items-center justify-content-center position-relative`}>
-                                    {pageIndex === pageKey &&
+                                    {/* {pageIndex === pageKey && */}
                                         <div className='background-container'>
                                             {backgroundToRender() && backgroundToRender()[page.background].blocks.map((block, key) => (
                                                 <Block
@@ -233,8 +233,8 @@ export default function InvitationShow() {
                                                 />
                                             ))}
                                         </div>
-                                    }
-                                    {pageIndex === pageKey &&
+                                    {/* } */}
+                                    {/* {pageIndex === pageKey && */}
                                         <div className='content-frame'>
                                             {page.blocks.map((block, key) => (
                                                 <Block
@@ -250,7 +250,7 @@ export default function InvitationShow() {
                                                 />
                                             ))}
                                         </div>
-                                    }
+                                    {/* } */}
                                 </li>
 
                             ))}
