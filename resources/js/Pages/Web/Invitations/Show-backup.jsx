@@ -141,6 +141,14 @@ export default function InvitationShow() {
         document.head.appendChild(style);
 
         //splidejs initialization
+        var mainSlider = new Splide('#main-slider', {
+            arrows: false,
+            width: "100vw",
+            height: "100%",
+            direction: 'ttb',
+            pagination: false,
+            dragMinThreshold: 2,
+        });
         var thumbSlider = new Splide('#thumb-slider', {
             arrows: false,
             fixedWidth: "100px",
@@ -149,27 +157,22 @@ export default function InvitationShow() {
             isNavigation: true,
             focus: "center",
         });
+        mainSlider.sync(thumbSlider);
+        mainSlider.mount();
         thumbSlider.mount();
 
-        thumbSlider.on('click', (e) => {
-            setPageIndex(e.index);
+        mainSlider.on('move', (index, prevIndex) => {
+            const el = document.querySelectorAll('#main-slider .splide__slide')
+            el[prevIndex].style.display = 'none';
+            setPageIndex(index);
+        })
+        mainSlider.on('drag', function(e){
+            console.log(pageIndex)
+
         })
 
         //replace template with custom content
         parsedContent && replaceTemplate()
-
-        //add swipe listener
-        document.addEventListener('swiped-up', (e) => {
-            pageIndex < pagesToRender().length - 1 && setPageIndex(pageIndex + 1)
-        })
-        document.addEventListener('swiped-down', (e) => {
-            pageIndex > 0 && setPageIndex(pageIndex - 1)
-        })
-
-        return () => {
-            document.removeEventListener('swiped-up', () => { });
-            document.removeEventListener('swiped-down', () => { });
-        }
 
 
     }, [pageIndex])
@@ -215,13 +218,15 @@ export default function InvitationShow() {
                         ))}
                     </div>
                 </div>
-                <div id='main-slider'>
-                    {pagesToRender() && pagesToRender().slice(1).map((page, pageKey) => (
-                        <div key={pageKey} className={`page-${pageKey + 1}`}>
-                            {pageIndex === pageKey &&
-                                <>
-
-                                    <div className='layer__background'>
+                <div id="main-slider" className="splide" aria-label="Main Slider">
+                    <div className="splide__track">
+                        <ul className="splide__list">
+                            {pagesToRender() && pagesToRender().slice(1).map((page, pageKey) => (
+                                <li key={pageKey}
+                                    className={`page-${pageKey + 1} h-100 splide__slide d-flex align-items-center justify-content-center position-relative`}
+                                >
+                                    {pageIndex === pageKey &&
+                                    <div className='background-container'>
                                         {backgroundToRender() && backgroundToRender()[page.background].blocks.map((block, key) => (
                                             <Block
                                                 key={key}
@@ -236,30 +241,30 @@ export default function InvitationShow() {
                                             />
                                         ))}
                                     </div>
-
-                                    <div className='layer__content'>
-                                        <div className='content-frame'>
-                                            {page.blocks.map((block, key) => (
-                                                <Block
-                                                    key={key}
-                                                    type={block.type}
-                                                    className={block.className}
-                                                    attributes={block.attributes}
-                                                    container_attributes={block.container_attributes}
-                                                    content={block.content}
-                                                    blocks={block.blocks}
-                                                    data={getFeatureData(block.type)}
-                                                    getFeatureData={getFeatureData}
-                                                />
-                                            ))}
-                                        </div>
+                                    }
+                                    {pageIndex === pageKey &&
+                                    <div className='content-frame'>
+                                        {page.blocks.map((block, key) => (
+                                            <Block
+                                                key={key}
+                                                type={block.type}
+                                                className={block.className}
+                                                attributes={block.attributes}
+                                                container_attributes={block.container_attributes}
+                                                content={block.content}
+                                                blocks={block.blocks}
+                                                data={getFeatureData(block.type)}
+                                                getFeatureData={getFeatureData}
+                                            />
+                                        ))}
                                     </div>
-                                </>
-                            }
-                        </div>
-                    ))}
-                </div>
+                                    }
+                                </li>
 
+                            ))}
+                        </ul>
+                    </div>
+                </div>
                 <div id="thumb-slider" className="splide" aria-label="Thumbnail Slider">
                     <div className="splide__track">
                         <ul className="splide__list">

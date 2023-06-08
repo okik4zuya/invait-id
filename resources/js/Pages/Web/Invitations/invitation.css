@@ -10,6 +10,21 @@
     height: 100%;
     position: relative;
 }
+.layer__background, .layer__content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+}
+.layer__background{
+    z-index: 0;
+
+}
+.layer__content{
+    z-index: 3;
+}
+
 
 @media screen and (min-width: 768px) {
     .canvas-absolute {
@@ -55,6 +70,7 @@
 }
 
 #thumb-slider {
+    position: absolute;
     height: 70px;
     bottom: 0;
     left: 0;

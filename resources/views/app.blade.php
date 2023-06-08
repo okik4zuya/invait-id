@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/fonts/index.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('/assets/js/vendor/swiped-events.js') }}"></script>
     {!! SEO::generate() !!}
     {{-- <link rel="shortcuticon" href="{{ asset('/assets/images/logo.png')}}" /> --}}
     @viteReactRefresh
