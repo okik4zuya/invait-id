@@ -129,7 +129,7 @@ export default function InvitationShow() {
         parsedContent && replaceTemplate()
 
         //update isStyleAdded to true
-        isStyleAdded === false && setIsStyleAdded(true)
+        isStyleAdded === false && setTimeout(setIsStyleAdded(true), 1500)
 
 
         $('#main-slider').not('.slick-initialized').slick({
