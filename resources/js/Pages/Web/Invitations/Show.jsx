@@ -147,7 +147,7 @@ export default function InvitationShow() {
         $('#main-slider').not('.slick-initialized').slick({
             fade: true,
             arrows: false,
-            verticalSwiping: true,
+            // verticalSwiping: true,
             infinite: false,
             asNavFor: "#thumb-slider"
         }).on('afterChange', (e, current) => {
@@ -163,6 +163,18 @@ export default function InvitationShow() {
             swipeToSlide: true
         }).on('afterChange', (e, current) => {
             setPageIndex(current.currentSlide)
+        })
+
+        document.addEventListener('swiped', (e) => {
+            if(e.detail.dir === 'up'){
+                let currentSlide = $('#main-slider').slick('slickCurrentSlide')
+                currentSlide < pagesToRender().length && $('#main-slider').slick('slickGoTo', currentSlide + 1)
+                console.log('swiped up')
+            } else if(e.detail.dir === 'down'){
+                let currentSlide = $('#main-slider').slick('slickCurrentSlide')
+                currentSlide > 0 && $('#main-slider').slick('slickGoTo', currentSlide + 1)
+                console.log('swiped down')
+            }
         })
 
         return () => {
