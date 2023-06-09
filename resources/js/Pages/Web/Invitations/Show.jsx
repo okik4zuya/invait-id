@@ -33,6 +33,9 @@ export default function InvitationShow() {
     const { isCoverShow, setIsCoverShow } = useInvitationStore(state => state);
     const { pageIndex, setPageIndex } = useInvitationStore(state => state);
 
+    //define states
+    const [isStyleAdded, setIsStyleAdded] = useState(false)
+
 
     //parse content and template
     const parsedContent = YAML.parse(invitation.custom_template.content);
@@ -84,25 +87,6 @@ export default function InvitationShow() {
 
     }
 
-    //replace template string -- alternative method
-    // const replacedTemplate = (pages) => {
-    //     let stringToReplace = {};
-    //     for (let i = 0; i < parsedContent.pages.length; i++) {
-    //         stringToReplace = { ...stringToReplace, ...parsedContent.pages[i] }
-    //     }
-    //     for (let i = 0; i < pages.length; i++) {
-    //         for (let j = 0; j < pages[i].blocks.length; j++) {
-    //             if (stringToReplace.hasOwnProperty(pages[i].blocks[j].content)) {
-    //                 pages[i].blocks[j].content = stringToReplace[pages[i].blocks[j].content]
-    //             }
-    //             if (stringToReplace.hasOwnProperty(pages[i].blocks[j].attributes.src)) {
-    //                 pages[i].blocks[j].attributes.src = stringToReplace[pages[i].blocks[j].attributes.src]
-    //             }
-    //         }
-    //     }
-    //     return pages;
-    // }
-
 
     //backgroundToRender
     const backgroundToRender = () => {
@@ -140,8 +124,12 @@ export default function InvitationShow() {
         style.innerHTML = invitation.is_custom_template == true ? invitation.custom_template.css : invitation.template.css;
         document.head.appendChild(style);
 
+
         //replace template with custom content
         parsedContent && replaceTemplate()
+
+        //update isStyleAdded to true
+        isStyleAdded === false && setIsStyleAdded(true)
 
 
         $('#main-slider').not('.slick-initialized').slick({
@@ -166,87 +154,79 @@ export default function InvitationShow() {
         })
 
         document.addEventListener('swiped', (e) => {
-            if(e.detail.dir === 'up'){
+            if (e.detail.dir === 'up') {
                 let currentSlide = $('#main-slider').slick('slickCurrentSlide')
                 currentSlide < pagesToRender().length && $('#main-slider').slick('slickGoTo', currentSlide + 1)
-            } else if(e.detail.dir === 'down'){
+            } else if (e.detail.dir === 'down') {
                 let currentSlide = $('#main-slider').slick('slickCurrentSlide')
                 currentSlide > 0 && $('#main-slider').slick('slickGoTo', currentSlide - 1)
             }
         })
 
         return () => {
-            document.removeEventListener('swiped', () => {})
+            document.removeEventListener('swiped', () => { })
         }
 
 
-    }, [pageIndex])
+    }, [pageIndex, isStyleAdded])
 
-    return (
-        <div className='canvas-absolute'>
-            <div className='canvas-relative'>
-                {getFeatureData('audio')?.is_enabled && <AudioButton src={getFeatureData('audio').data.src} />}
-                <Modal isShow={isModalGiftShow} onClose={() => setIsModalGiftShow(false)}><Gift data={getFeatureData('gift')} /> </Modal>
-                <Modal isShow={isModalUcapanShow} onClose={() => setIsModalUcapanShow(false)}><Ucapan data={getFeatureData('ucapan')} messages={invitation.invitation_message} /> </Modal>
-                <Modal isShow={isModalRsvpShow} onClose={() => setIsModalRsvpShow(false)}><Reservation data={getFeatureData('rsvp')} /> </Modal>
-                <div
-                    className={`cover-container ${isCoverShow == false && "cover-container--out"}`}
-                >
-                    <div className='background-container'>
-                        {backgroundToRender() && backgroundToRender()[0].blocks.map((block, key) => (
-                            <Block
-                                key={key}
-                                type={block.type}
-                                className={block.className}
-                                attributes={block.attributes}
-                                container_attributes={block.container_attributes}
-                                content={block.content}
-                                blocks={block.blocks}
-                                data={getFeatureData(block.type)}
-                                getFeatureData={getFeatureData}
-                            />
-                        ))}
-                    </div>
-                    <div className='content-frame'>
-                        {pagesToRender() && pagesToRender()[0].blocks?.map((block, key) => (
-                            <Block
-                                key={key}
-                                type={block.type}
-                                className={block.className}
-                                attributes={block.attributes}
-                                container_attributes={block.container_attributes}
-                                content={block.content}
-                                blocks={block.blocks}
-                                data={getFeatureData(block.type)}
-                                getFeatureData={getFeatureData}
-                            />
-                        ))}
-                    </div>
+    if (isStyleAdded === false) {
+        return (
+            <div className='d-flex w-100 justify-content-center align-items-center' style={{ height: '100vh' }}>
+                <div className="spinner-border text-secondary" role="status" style={{ width: '3rem', height:'3rem' }}>
+                    <span className="sr-only">Loading...</span>
                 </div>
-                <div id='main-slider'>
-                    {pagesToRender() && pagesToRender().slice(1).map((page, pageKey) => (
-                        <div key={pageKey} className={`page-${pageKey + 1}`}>
-                            {pageIndex === pageKey &&
-                                <>
-                                    <div className='layer__background'>
-                                        {backgroundToRender() && backgroundToRender()[page.background].blocks.map((block, key) => (
-                                            <Block
-                                                key={key}
-                                                type={block.type}
-                                                className={block.className}
-                                                attributes={block.attributes}
-                                                container_attributes={block.container_attributes}
-                                                content={block.content}
-                                                blocks={block.blocks}
-                                                data={getFeatureData(block.type)}
-                                                getFeatureData={getFeatureData}
-                                            />
-                                        ))}
-                                    </div>
-
-                                    <div className='layer__content'>
-                                        <div className='content-frame'>
-                                            {page.blocks.map((block, key) => (
+            </div>
+        )
+    } else {
+        return (
+            <div className='canvas-absolute'>
+                <div className='canvas-relative'>
+                    {getFeatureData('audio')?.is_enabled && <AudioButton src={getFeatureData('audio').data.src} />}
+                    <Modal isShow={isModalGiftShow} onClose={() => setIsModalGiftShow(false)}><Gift data={getFeatureData('gift')} /> </Modal>
+                    <Modal isShow={isModalUcapanShow} onClose={() => setIsModalUcapanShow(false)}><Ucapan data={getFeatureData('ucapan')} messages={invitation.invitation_message} /> </Modal>
+                    <Modal isShow={isModalRsvpShow} onClose={() => setIsModalRsvpShow(false)}><Reservation data={getFeatureData('rsvp')} /> </Modal>
+                    <div
+                        className={`cover-container ${isCoverShow == false && "cover-container--out"}`}
+                    >
+                        <div className='background-container'>
+                            {backgroundToRender() && backgroundToRender()[0].blocks.map((block, key) => (
+                                <Block
+                                    key={key}
+                                    type={block.type}
+                                    className={block.className}
+                                    attributes={block.attributes}
+                                    container_attributes={block.container_attributes}
+                                    content={block.content}
+                                    blocks={block.blocks}
+                                    data={getFeatureData(block.type)}
+                                    getFeatureData={getFeatureData}
+                                />
+                            ))}
+                        </div>
+                        <div className='content-frame'>
+                            {pagesToRender() && pagesToRender()[0].blocks?.map((block, key) => (
+                                <Block
+                                    key={key}
+                                    type={block.type}
+                                    className={block.className}
+                                    attributes={block.attributes}
+                                    container_attributes={block.container_attributes}
+                                    content={block.content}
+                                    blocks={block.blocks}
+                                    data={getFeatureData(block.type)}
+                                    getFeatureData={getFeatureData}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                    <div id='main-slider'>
+                        {pagesToRender() && pagesToRender().slice(1).map((page, pageKey) => (
+                            <div key={pageKey} className={`page-${pageKey + 1}`}>
+                                {pageIndex === pageKey &&
+                                    <>
+                                        <div className='layer__background'>
+                                            {backgroundToRender() && backgroundToRender()[page.background].blocks.map((block, key) => (
                                                 <Block
                                                     key={key}
                                                     type={block.type}
@@ -260,24 +240,42 @@ export default function InvitationShow() {
                                                 />
                                             ))}
                                         </div>
-                                    </div>
-                                </>
-                            }
-                        </div>
-                    ))}
-                </div>
 
-                <div id="thumb-slider">
-                            {pagesToRender().slice(1).map((page, key) => (
-                                <li key={key} className="menu-thumb d-flex flex-column align-items-center justify-content-center">
-                                    <i className={`${page.thumb_icon} menu-thumb__icon`} />
-                                    <div className='menu-thumb__title mt-1'>
-                                        {page.page_title}
-                                    </div>
-                                </li>
-                            ))}
+                                        <div className='layer__content'>
+                                            <div className='content-frame'>
+                                                {page.blocks.map((block, key) => (
+                                                    <Block
+                                                        key={key}
+                                                        type={block.type}
+                                                        className={block.className}
+                                                        attributes={block.attributes}
+                                                        container_attributes={block.container_attributes}
+                                                        content={block.content}
+                                                        blocks={block.blocks}
+                                                        data={getFeatureData(block.type)}
+                                                        getFeatureData={getFeatureData}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </>
+                                }
+                            </div>
+                        ))}
+                    </div>
+
+                    <div id="thumb-slider">
+                        {pagesToRender().slice(1).map((page, key) => (
+                            <li key={key} className="menu-thumb d-flex flex-column align-items-center justify-content-center">
+                                <i className={`${page.thumb_icon} menu-thumb__icon`} />
+                                <div className='menu-thumb__title mt-1'>
+                                    {page.page_title}
+                                </div>
+                            </li>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
