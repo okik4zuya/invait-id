@@ -1,0 +1,1 @@
+import{R as e}from"./app.bfb547a1.js";function m({isShow:a,onClose:t,children:l,position:n}){return e.createElement(e.Fragment,null,a&&e.createElement("div",{className:"modal__container"},e.createElement("div",{className:"modal__backdrop",onClick:t}),e.createElement("div",{className:"modal__children"}," ",l," ")))}export{m as default};

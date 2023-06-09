@@ -169,15 +169,14 @@ export default function InvitationShow() {
             if(e.detail.dir === 'up'){
                 let currentSlide = $('#main-slider').slick('slickCurrentSlide')
                 currentSlide < pagesToRender().length && $('#main-slider').slick('slickGoTo', currentSlide + 1)
-                console.log('swiped up')
             } else if(e.detail.dir === 'down'){
                 let currentSlide = $('#main-slider').slick('slickCurrentSlide')
-                currentSlide > 0 && $('#main-slider').slick('slickGoTo', currentSlide + 1)
-                console.log('swiped down')
+                currentSlide > 0 && $('#main-slider').slick('slickGoTo', currentSlide - 1)
             }
         })
 
         return () => {
+            document.removeEventListener('swiped', () => {})
         }
 
 
