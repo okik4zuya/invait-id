@@ -140,35 +140,20 @@ export default function InvitationShow() {
         style.innerHTML = invitation.is_custom_template == true ? invitation.custom_template.css : invitation.template.css;
         document.head.appendChild(style);
 
-        //splidejs initialization
-        var thumbSlider = new Splide('#thumb-slider', {
-            arrows: false,
-            fixedWidth: "100px",
-            height: "70px",
-            pagination: false,
-            isNavigation: true,
-            focus: "center",
-        });
-        thumbSlider.mount();
-
-        thumbSlider.on('click', (e) => {
-            setPageIndex(e.index);
-        })
-
         //replace template with custom content
         parsedContent && replaceTemplate()
 
-        //add swipe listener
-        document.addEventListener('swiped-up', (e) => {
-            pageIndex < pagesToRender().length - 1 && setPageIndex(pageIndex + 1)
-        })
-        document.addEventListener('swiped-down', (e) => {
-            pageIndex > 0 && setPageIndex(pageIndex - 1)
+
+        $('#main-slider').not('.slick-initialized').slick({
+            fade: true,
+            arrows: false,
+            verticalSwiping: true,
+            infinite: false
+        }).on('afterChange', (e, current) => {
+            setPageIndex(current.currentSlide)
         })
 
         return () => {
-            document.removeEventListener('swiped-up', () => { });
-            document.removeEventListener('swiped-down', () => { });
         }
 
 
@@ -220,7 +205,6 @@ export default function InvitationShow() {
                         <div key={pageKey} className={`page-${pageKey + 1}`}>
                             {pageIndex === pageKey &&
                                 <>
-
                                     <div className='layer__background'>
                                         {backgroundToRender() && backgroundToRender()[page.background].blocks.map((block, key) => (
                                             <Block
