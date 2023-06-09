@@ -221,7 +221,7 @@ export default function InvitationShow() {
                         </div>
                     </div>
                     <div id='main-slider'>
-                        {pagesToRender() && pagesToRender().slice(1).map((page, pageKey) => (
+                        {isStyleAdded === true && pagesToRender() && pagesToRender().slice(1).map((page, pageKey) => (
                             <div key={pageKey} className={`page-${pageKey + 1}`}>
                                 {pageIndex === pageKey &&
                                     <>
