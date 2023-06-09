@@ -148,7 +148,8 @@ export default function InvitationShow() {
             fade: true,
             arrows: false,
             verticalSwiping: true,
-            infinite: false
+            infinite: false,
+            touchTreshold: 50
         }).on('afterChange', (e, current) => {
             setPageIndex(current.currentSlide)
         })
