@@ -149,7 +149,18 @@ export default function InvitationShow() {
             arrows: false,
             verticalSwiping: true,
             infinite: false,
-            touchTreshold: 50
+            asNavFor: "#thumb-slider"
+        }).on('afterChange', (e, current) => {
+            setPageIndex(current.currentSlide)
+        })
+        $('#thumb-slider').not('.slick-initialized').slick({
+            arrows: false,
+            infinite: false,
+            asNavFor: "#main-slider",
+            slidesToShow: 4,
+            centerMode: false,
+            focusOnSelect: true,
+            swipeToSlide: true
         }).on('afterChange', (e, current) => {
             setPageIndex(current.currentSlide)
         })
@@ -245,19 +256,15 @@ export default function InvitationShow() {
                     ))}
                 </div>
 
-                <div id="thumb-slider" className="splide" aria-label="Thumbnail Slider">
-                    <div className="splide__track">
-                        <ul className="splide__list">
+                <div id="thumb-slider">
                             {pagesToRender().slice(1).map((page, key) => (
-                                <li key={key} className="splide__slide menu-thumb d-flex flex-column align-items-center justify-content-center">
+                                <li key={key} className="menu-thumb d-flex flex-column align-items-center justify-content-center">
                                     <i className={`${page.thumb_icon} menu-thumb__icon`} />
                                     <div className='menu-thumb__title mt-1'>
                                         {page.page_title}
                                     </div>
                                 </li>
                             ))}
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
