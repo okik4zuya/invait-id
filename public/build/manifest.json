@@ -559,7 +559,7 @@
       "_cst-visit.b44e8428.js"
     ],
     "css": [
-      "assets/animate.64f0e549.css"
+      "assets/animate.3d1d57c1.css"
     ]
   },
   "resources/js/Pages/Web/Invitations/Show.jsx": {
@@ -583,7 +583,7 @@
       "_cst-visit.b44e8428.js"
     ],
     "css": [
-      "assets/animate.64f0e549.css"
+      "assets/animate.3d1d57c1.css"
     ]
   },
   "resources/js/Pages/Web/Tema/Index.jsx": {
@@ -606,24 +606,24 @@
     "file": "assets/Index.d7ff9a9a.css",
     "src": "resources/js/Pages/Account/Templates/Index.css"
   },
-  "splide-core.css": {
-    "file": "assets/splide-core.0471d8ba.css",
-    "src": "splide-core.css"
+  "resources/js/Pages/Web/Home/Index.css": {
+    "file": "assets/Index.2c8ba7b3.css",
+    "src": "resources/js/Pages/Web/Home/Index.css"
   },
   "Web.css": {
     "file": "assets/Web.70bd183d.css",
     "src": "Web.css"
   },
-  "resources/js/Pages/Web/Home/Index.css": {
-    "file": "assets/Index.2c8ba7b3.css",
-    "src": "resources/js/Pages/Web/Home/Index.css"
+  "splide-core.css": {
+    "file": "assets/splide-core.0471d8ba.css",
+    "src": "splide-core.css"
   },
   "resources/js/Pages/Web/Tema/Index.css": {
     "file": "assets/Index.05824e02.css",
     "src": "resources/js/Pages/Web/Tema/Index.css"
   },
   "animate.css": {
-    "file": "assets/animate.64f0e549.css",
+    "file": "assets/animate.3d1d57c1.css",
     "src": "animate.css"
   }
 }
