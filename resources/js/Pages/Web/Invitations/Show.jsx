@@ -87,6 +87,16 @@ export default function InvitationShow() {
 
     }
 
+    //canvas to render
+    const canvasToRender = () => {
+        let canvas;
+        if (invitation.is_custom_template == true) {
+            canvas = parsedCustomTemplate.canvas ?? null;
+        } else {
+            canvas = parsedTemplate.canvas ?? null;
+        }
+        return canvas;
+    }
 
     //backgroundToRender
     const backgroundToRender = () => {
@@ -173,7 +183,7 @@ export default function InvitationShow() {
     if (isStyleAdded === false) {
         return (
             <div className='d-flex w-100 justify-content-center align-items-center' style={{ height: '100vh' }}>
-                <div className="spinner-border text-secondary" role="status" style={{ width: '3rem', height:'3rem' }}>
+                <div className="spinner-border text-secondary" role="status" style={{ width: '3rem', height: '3rem' }}>
                     <span className="sr-only">Loading...</span>
                 </div>
             </div>
@@ -181,11 +191,24 @@ export default function InvitationShow() {
     } else {
         return (
             <div className='canvas-absolute'>
-                <div className='canvas-relative'>
+                <div className='canvas-relative layer__canvas'>
                     {getFeatureData('audio')?.is_enabled && <AudioButton src={getFeatureData('audio').data.src} />}
                     <Modal isShow={isModalGiftShow} onClose={() => setIsModalGiftShow(false)}><Gift data={getFeatureData('gift')} /> </Modal>
                     <Modal isShow={isModalUcapanShow} onClose={() => setIsModalUcapanShow(false)}><Ucapan data={getFeatureData('ucapan')} messages={invitation.invitation_message} /> </Modal>
                     <Modal isShow={isModalRsvpShow} onClose={() => setIsModalRsvpShow(false)}><Reservation data={getFeatureData('rsvp')} /> </Modal>
+                    {canvasToRender() && canvasToRender()[0].blocks.map((block, key) => (
+                        <Block
+                            key={key}
+                            type={block.type}
+                            className={block.className}
+                            attributes={block.attributes}
+                            container_attributes={block.container_attributes}
+                            content={block.content}
+                            blocks={block.blocks}
+                            data={getFeatureData(block.type)}
+                            getFeatureData={getFeatureData}
+                        />
+                    ))}
                     <div
                         className={`cover-container ${isCoverShow == false && "cover-container--out"}`}
                     >

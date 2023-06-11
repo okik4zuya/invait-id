@@ -215,6 +215,7 @@ export default function InvitationForm({
             client_id: clientId,
             reseller_id: resellerId
         }, {
+            preserveState: true,
             onSuccess: () => {
                 Inertia.visit(url,{},{preserveState: true})
 
