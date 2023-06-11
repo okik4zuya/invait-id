@@ -196,7 +196,7 @@ export default function InvitationShow() {
                     <Modal isShow={isModalGiftShow} onClose={() => setIsModalGiftShow(false)}><Gift data={getFeatureData('gift')} /> </Modal>
                     <Modal isShow={isModalUcapanShow} onClose={() => setIsModalUcapanShow(false)}><Ucapan data={getFeatureData('ucapan')} messages={invitation.invitation_message} /> </Modal>
                     <Modal isShow={isModalRsvpShow} onClose={() => setIsModalRsvpShow(false)}><Reservation data={getFeatureData('rsvp')} /> </Modal>
-                    {canvasToRender() && canvasToRender()[0].blocks.map((block, key) => (
+                    {canvasToRender() && canvasToRender()[0].blocks?.map((block, key) => (
                         <Block
                             key={key}
                             type={block.type}
@@ -213,7 +213,7 @@ export default function InvitationShow() {
                         className={`cover-container ${isCoverShow == false && "cover-container--out"}`}
                     >
                         <div className='background-container'>
-                            {backgroundToRender() && backgroundToRender()[0].blocks.map((block, key) => (
+                            {backgroundToRender() && backgroundToRender()[0].blocks?.map((block, key) => (
                                 <Block
                                     key={key}
                                     type={block.type}
@@ -249,7 +249,7 @@ export default function InvitationShow() {
                                 {pageIndex === pageKey &&
                                     <>
                                         <div className='layer__background'>
-                                            {backgroundToRender() && backgroundToRender()[page.background].blocks.map((block, key) => (
+                                            {backgroundToRender() && backgroundToRender()[page.background].blocks?.map((block, key) => (
                                                 <Block
                                                     key={key}
                                                     type={block.type}
@@ -266,7 +266,7 @@ export default function InvitationShow() {
 
                                         <div className='layer__content'>
                                             <div className='content-frame'>
-                                                {page.blocks.map((block, key) => (
+                                                {page.blocks?.map((block, key) => (
                                                     <Block
                                                         key={key}
                                                         type={block.type}
