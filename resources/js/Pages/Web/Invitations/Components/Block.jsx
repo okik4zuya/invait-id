@@ -117,7 +117,7 @@ export default function Block(props) {
         case "rsvp": return (<> {data?.is_enabled ? <div {...attributes} className={`btn-primary ${attributes?.className}`} onClick={() => setIsModalRsvpShow(true)}>{data?.data.button_title}</div> : null} </>)
             break;
         case "invait_credit": return (
-            <div className="invait_credit">Made with <i className="heart fa-solid fa-heart" /> by <a className="invait" href="/">Invait</a></div>
+            <div {...attributes}>Made with <i className="heart fa-solid fa-heart" /> by <a className="invait" href="/">Invait</a></div>
         )
             break;
         default: return null;
