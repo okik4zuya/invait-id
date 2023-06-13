@@ -17,7 +17,7 @@ export default function Reservation(props) {
     const [numberPresent, setNumberPresent] = useState(0)
     const [isSending, setIsSending] = useState(false)
     const [isSent, setIsSent] = useState(false)
-    console.log({ name, message })
+    //console.log({ name, message })
 
     //destructure zustand state
     const { setIsModalRsvpShow } = useInvitationStore(state => state);
@@ -40,6 +40,9 @@ export default function Reservation(props) {
                 onSuccess: () => {
                     setIsSending(false);
                     setIsSent(true);
+                    setName('')
+                    setConfirmation('')
+                    
                 }
             }
         );
