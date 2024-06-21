@@ -1,4 +1,4 @@
-# Web Invitation Project
+# Web Invitation Project with Laravel, React JS, and Inertia JS
 
 Welcome to the Web Invitation Project! This project is a full-stack web application built using Laravel, React.js, and Inertia.js. It provides users with the ability to create, manage, and send digital invitations for various events.
 
@@ -13,8 +13,6 @@ Welcome to the Web Invitation Project! This project is a full-stack web applicat
 - [Usage](#usage)
   - [Running the Application](#running-the-application)
   - [Building for Production](#building-for-production)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -51,3 +49,64 @@ Welcome to the Web Invitation Project! This project is a full-stack web applicat
    git clone https://github.com/yourusername/web-invitation.git
    cd web-invitation
     ```
+
+2. **Install dependencies**
+
+   ```bash
+   composer install
+    ```
+3. **Copy the .env file and configure your environment variables:**
+
+   ```bash
+   cp .env.example .env
+    ```
+   Update the .env file with your database credentials and other configurations.
+   
+5. **Generate an application key:**
+   ```bash
+   php artisan key:generate
+    ```
+6. **Run the migrations:**
+   ```bash
+   php artisan migrate
+    ```
+
+### Frontend Setup
+1. **Navigate to the frontend directory:**
+   ```bash
+   cd resources/js
+    ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+3. **Build the frontend assets:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+    ```
+
+### Usage
+#### Running The Application
+To start the development server, run:
+```bash
+    php artisan serve
+```
+Visit http://localhost:8000 in your browser to see the application in action.
+
+#### Building for Production
+To build the frontend assets for production, run:
+```bash
+    npm run production
+    # or
+    yarn production
+```
+
+
+
+   
+   
+
